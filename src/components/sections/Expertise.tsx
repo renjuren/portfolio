@@ -17,7 +17,7 @@ export default function Expertise() {
   return (
     <section id="expertise" className="section-padding">
       <div className="container-max">
-        <SectionLabel number="03" title="Our Expertise" />
+        <SectionLabel number="03" title="My Expertise" />
 
         <div className="mt-12 md:mt-16">
           {expertiseItems.map((item, index) => {

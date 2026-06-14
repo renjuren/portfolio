@@ -30,12 +30,11 @@ export default function Hero() {
         style={{ opacity: textOpacity }}
       >
         <h1 className="text-display mb-10 md:mb-12">
-          <AnimatedText text="Design — Impact" />
+          <AnimatedText text="Enterprise SaaS, designed for complexity." />
         </h1>
         <ScrollReveal delay={0.4}>
-          <p className="text-body-lg max-w-2xl mx-auto uppercase tracking-widest text-text-secondary">
-            Senior Product Designer building enterprise SaaS for data-dense,
-            complex workflows.
+          <p className="text-body-lg max-w-3xl mx-auto uppercase tracking-widest text-text-secondary">
+            Senior Product Designer building data-dense workflows, design systems, and the tooling that connects them.
           </p>
         </ScrollReveal>
       </motion.div>

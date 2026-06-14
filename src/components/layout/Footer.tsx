@@ -38,14 +38,6 @@ export default function Footer() {
                 >
                   {footerData.contact.email}
                 </a>
-                <a
-                  href={`https://api.whatsapp.com/send?phone=919539803557&text=Hello%20Renju%2C%20I%27m%20here%20from%20your%20portfolio%20website`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block text-sm text-text-light/80 hover:text-white transition-colors duration-300"
-                >
-                  {footerData.contact.phone}
-                </a>
                 <p className="text-sm text-text-light/60">
                   {footerData.contact.address}
                 </p>

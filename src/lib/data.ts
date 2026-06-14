@@ -5,16 +5,15 @@ export const navLinks = {
     { label: "About", href: "/#about" },
   ],
   center: [
-    { label: "Services", href: "/#expertise" },
     { label: "Contact", href: "/#contact" },
   ],
 };
 
 export const statistics = [
-  { value: 100, suffix: "+", label: "Projects Completed" },
   { value: 6, suffix: "+", label: "Years Experience" },
-  { value: 15, suffix: "+", label: "Satisfied Clients" },
-  { value: 4, suffix: "", label: "Industries Served" },
+  { value: 12, suffix: "+", label: "Designers Aligned (across the IDP design system)" },
+  { value: 50, suffix: "+", label: "Engineers Adopting (the IDP design system)" },
+  { value: 4, suffix: "", label: "Cities (Chennai, London, Melbourne, Taipei)" },
 ];
 
 export const projects = [
@@ -122,7 +121,6 @@ export const footerData = {
     { label: "Home", href: "/#home" },
     { label: "Work", href: "/#projects" },
     { label: "About", href: "/#about" },
-    { label: "Services", href: "/#expertise" },
     { label: "Contact", href: "/#contact" },
   ],
   social: [

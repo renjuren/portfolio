@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import PillButton from "@/components/ui/PillButton";
 import { projects } from "@/lib/data";
@@ -15,6 +16,10 @@ export default function Projects() {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
+  const visibleProjects = projects.filter(
+    (project) => project.title === "Enterprise Design System"
+  );
+
   return (
     <section
       id="projects"
@@ -25,52 +30,70 @@ export default function Projects() {
         <SectionLabel number="02" title="Selected Work" light />
 
         <div className="mt-12 md:mt-16">
-          {projects.map((project, index) => (
-            <motion.a
-              key={project.title}
-              href={project.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="border-b border-border-dark py-8 md:py-10 cursor-pointer group block"
-              onMouseEnter={() => setHoveredIndex(index)}
-              onMouseLeave={() => setHoveredIndex(null)}
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.1, duration: 0.6 }}
-            >
-              <div className="flex items-center justify-between gap-4">
-                <div className="flex items-baseline gap-4 md:gap-8 flex-1">
-                  <span className="text-label text-text-muted hidden md:block min-w-[60px]">
-                    {project.year}
-                  </span>
-                  <h3
-                    className={`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight transition-all duration-500 ${
-                      hoveredIndex !== null && hoveredIndex !== index
-                        ? "opacity-30"
-                        : "opacity-100"
-                    }`}
-                  >
-                    {project.title}
-                  </h3>
-                </div>
-                <span
-                  className={`text-label text-text-muted transition-all duration-500 hidden sm:block ${
-                    hoveredIndex !== null && hoveredIndex !== index
-                      ? "opacity-30"
-                      : "opacity-100"
-                  }`}
+          {visibleProjects.map((project, index) => {
+            const isExternal = project.href.startsWith("http");
+            return (
+              <motion.div
+                key={project.title}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.1, duration: 0.6 }}
+                className="border-b border-border-dark"
+              >
+                <Link
+                  href={project.href}
+                  target={isExternal ? "_blank" : undefined}
+                  rel={isExternal ? "noopener noreferrer" : undefined}
+                  className="py-8 md:py-10 cursor-pointer group block"
+                  onMouseEnter={() => setHoveredIndex(index)}
+                  onMouseLeave={() => setHoveredIndex(null)}
                 >
-                  {project.category}
-                </span>
-              </div>
-            </motion.a>
-          ))}
+                  <div className="flex items-center justify-between gap-4">
+                    <div className="flex items-baseline gap-4 md:gap-8 flex-1">
+                      <span className="text-label text-text-muted hidden md:block min-w-[60px]">
+                        {project.year}
+                      </span>
+                      <h3
+                        className={`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight transition-all duration-500 ${
+                          hoveredIndex !== null && hoveredIndex !== index
+                            ? "opacity-30"
+                            : "opacity-100"
+                        }`}
+                      >
+                        {project.title}
+                      </h3>
+                    </div>
+                    <span
+                      className={`text-label text-text-muted transition-all duration-500 hidden sm:block ${
+                        hoveredIndex !== null && hoveredIndex !== index
+                          ? "opacity-30"
+                          : "opacity-100"
+                      }`}
+                    >
+                      {project.category}
+                    </span>
+                  </div>
+                </Link>
+              </motion.div>
+            );
+          })}
         </div>
+
+        {/* Small Note below the list */}
+        <motion.p
+          className="mt-6 text-sm text-text-muted font-light italic"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.2, duration: 0.6 }}
+        >
+          More case studies in progress.
+        </motion.p>
 
         {/* Floating Image that follows cursor */}
         <AnimatePresence>
-          {hoveredIndex !== null && (
+          {hoveredIndex !== null && visibleProjects[hoveredIndex] && (
             <motion.div
               className="fixed pointer-events-none z-50 w-72 h-48 md:w-96 md:h-64 overflow-hidden rounded-sm shadow-2xl hidden md:block"
               style={{
@@ -83,8 +106,8 @@ export default function Projects() {
               transition={{ duration: 0.3, ease: [0.25, 0.1, 0.25, 1] }}
             >
               <Image
-                src={projects[hoveredIndex].image}
-                alt={projects[hoveredIndex].title}
+                src={visibleProjects[hoveredIndex].image}
+                alt={visibleProjects[hoveredIndex].title}
                 fill
                 className="object-cover"
                 sizes="400px"

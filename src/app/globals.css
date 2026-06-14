@@ -42,7 +42,7 @@ body {
 /* === Typography Scale === */
 .text-display {
   font-size: clamp(3rem, 8vw, 9rem);
-  line-height: 0.95;
+  line-height: 1.1;
   letter-spacing: -0.03em;
   font-weight: 300;
 }

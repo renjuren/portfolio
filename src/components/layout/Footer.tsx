@@ -15,7 +15,7 @@ export default function Footer() {
           <ScrollReveal delay={0}>
             <div>
               <Link
-                href="#home"
+                href="/"
                 className="text-2xl font-semibold tracking-tight block mb-6"
               >
                 RENJU JOSEPH.

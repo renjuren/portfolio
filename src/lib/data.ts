@@ -1,12 +1,12 @@
 export const navLinks = {
   left: [
-    { label: "Home", href: "#home" },
-    { label: "Work", href: "#projects" },
-    { label: "About", href: "#about" },
+    { label: "Home", href: "/#home" },
+    { label: "Work", href: "/#projects" },
+    { label: "About", href: "/#about" },
   ],
   center: [
-    { label: "Services", href: "#expertise" },
-    { label: "Contact", href: "#contact" },
+    { label: "Services", href: "/#expertise" },
+    { label: "Contact", href: "/#contact" },
   ],
 };
 
@@ -21,13 +21,15 @@ export const projects = [
   {
     title: "Enterprise Design System",
     category: "UX Architecture & Systems",
+    tags: ["Design Systems", "UX/UI"],
     year: "2026",
-    image: "/images/project-eds.png",
-    href: "https://renjujoseph.framer.website/projects/idp-design-system-2026",
+    image: "/images/project-design-system-v5.png",
+    href: "/projects/idp-design-system-2026",
   },
   {
     title: "SMAT: Social Audio Platform",
     category: "Product Strategy & Full-Stack Design",
+    tags: ["Product Design", "Product Strategy"],
     year: "2025",
     image: "/images/project-smat.png",
     href: "https://renjujoseph.framer.website/projects/smat-social-sync-platform",
@@ -35,6 +37,7 @@ export const projects = [
   {
     title: "PeerShare: Resource Ecosystem",
     category: "Product Design & User Research",
+    tags: ["Product Design", "User Research"],
     year: "2024",
     image: "/images/project-peershare.png",
     href: "https://renjujoseph.framer.website/projects/campus-resource-sharing-app",
@@ -42,6 +45,7 @@ export const projects = [
   {
     title: "RevenueHero: Landing Page",
     category: "Growth Design & CRO",
+    tags: ["Growth & CRO"],
     year: "2024",
     image: "/images/project-revenuehero.png",
     href: "https://renjujoseph.framer.website/projects/revenuehero-landing-page-optimization",
@@ -67,7 +71,7 @@ export const expertiseItems = [
   {
     id: "ux-ui-design",
     title: "UX/UI Design",
-    image: "/images/project-eds.png",
+    image: "/images/project-design-system-v5.png",
     description:
       "I craft intuitive interfaces for complex enterprise platforms — simplifying data-dense workflows without sacrificing power. Every pixel serves a purpose, every interaction feels natural.",
     services: [
@@ -115,11 +119,11 @@ export const footerData = {
     address: "Chennai, India · Remote Friendly",
   },
   navigation: [
-    { label: "Home", href: "#home" },
-    { label: "Work", href: "#projects" },
-    { label: "About", href: "#about" },
-    { label: "Services", href: "#expertise" },
-    { label: "Contact", href: "#contact" },
+    { label: "Home", href: "/#home" },
+    { label: "Work", href: "/#projects" },
+    { label: "About", href: "/#about" },
+    { label: "Services", href: "/#expertise" },
+    { label: "Contact", href: "/#contact" },
   ],
   social: [
     {

@@ -101,7 +101,7 @@ export default function Projects() {
           transition={{ delay: 0.4, duration: 0.6 }}
         >
           <PillButton
-            href="https://renjujoseph.framer.website/projects"
+            href="/projects"
             variant="light"
           >
             View All Works

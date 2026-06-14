@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import Image from "next/image";
+import Link from "next/link";
 import AnimatedText from "@/components/ui/AnimatedText";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 
@@ -25,10 +26,10 @@ export default function Hero() {
     >
       {/* Hero Text */}
       <motion.div
-        className="container-max text-center mb-12 md:mb-16"
+        className="container-max text-center mb-20 md:mb-28"
         style={{ opacity: textOpacity }}
       >
-        <h1 className="text-display mb-6">
+        <h1 className="text-display mb-10 md:mb-12">
           <AnimatedText text="Design — Impact" />
         </h1>
         <ScrollReveal delay={0.4}>
@@ -47,20 +48,18 @@ export default function Hero() {
             style={{ y: imageY, scale: imageScale }}
           >
             <Image
-              src="/images/project-revenuehero.png"
-              alt="RevenueHero landing page design — featured project by Renju Joseph"
+              src="/images/project-design-system-v5.png"
+              alt="Enterprise Design System scaling — featured key project by Renju Joseph"
               fill
               priority
-              className="object-cover"
-              sizes="100vw"
+              className="object-contain"
+              sizes="(max-width: 768px) calc(100vw - 3rem), (max-width: 1024px) calc(100vw - 6rem), (max-width: 1440px) calc(100vw - 8rem), 1312px"
             />
           </motion.div>
 
           {/* View Project Overlay Button */}
-          <motion.a
-            href="https://renjujoseph.framer.website/projects/revenuehero-landing-page-optimization"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/projects/idp-design-system-2026"
             className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
           >
             <motion.span
@@ -86,7 +85,7 @@ export default function Hero() {
                 />
               </svg>
             </motion.span>
-          </motion.a>
+          </Link>
 
           {/* Bottom gradient */}
           <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg-light/30 to-transparent" />

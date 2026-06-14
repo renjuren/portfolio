@@ -54,7 +54,7 @@ export default function AnimatedText({
       {words.map((word, index) => (
         <motion.span
           key={index}
-          className="inline-block overflow-hidden mr-[0.3em]"
+          className="inline-block overflow-hidden mr-[0.3em] py-[0.2em] -my-[0.2em]"
           variants={child}
         >
           <span className="inline-block">{word}</span>

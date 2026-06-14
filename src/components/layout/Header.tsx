@@ -5,7 +5,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 
-export default function Header() {
+interface HeaderProps {
+  lightOnTransparent?: boolean;
+}
+
+export default function Header({ lightOnTransparent = false }: HeaderProps) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -28,6 +32,20 @@ export default function Header() {
     };
   }, [isMobileMenuOpen]);
 
+  const isLightText = lightOnTransparent && !isScrolled;
+
+  const textPrimaryClass = isLightText
+    ? "text-text-light hover:text-white"
+    : "text-text-primary hover:text-text-secondary";
+
+  const textSecondaryClass = isLightText
+    ? "text-text-light/80 hover:text-white"
+    : "text-text-secondary hover:text-text-primary";
+
+  const hamburgerLineClass = (isLightText && !isMobileMenuOpen)
+    ? "bg-text-light"
+    : "bg-text-primary";
+
   return (
     <>
       <motion.header
@@ -47,7 +65,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-text-primary hover:text-text-secondary transition-colors duration-300"
+                className={`text-sm font-medium transition-colors duration-300 ${textPrimaryClass}`}
               >
                 {link.label}
               </Link>
@@ -60,7 +78,7 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                className="text-sm font-medium text-text-secondary hover:text-text-primary transition-colors duration-300"
+                className={`text-sm font-medium transition-colors duration-300 ${textSecondaryClass}`}
               >
                 {link.label}
               </Link>
@@ -69,8 +87,8 @@ export default function Header() {
 
           {/* Logo - Right */}
           <Link
-            href="#home"
-            className="text-lg md:text-xl font-semibold tracking-tight text-text-primary"
+            href="/"
+            className={`text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${isLightText ? "text-text-light hover:text-white" : "text-text-primary hover:text-text-secondary"}`}
           >
             RENJU JOSEPH.
           </Link>
@@ -83,19 +101,19 @@ export default function Header() {
             id="mobile-menu-toggle"
           >
             <motion.span
-              className="w-6 h-0.5 bg-text-primary block"
+              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
               animate={
                 isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
               }
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="w-6 h-0.5 bg-text-primary block"
+              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
               animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className="w-6 h-0.5 bg-text-primary block"
+              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
               animate={
                 isMobileMenuOpen
                   ? { rotate: -45, y: -8 }

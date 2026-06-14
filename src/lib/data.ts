@@ -5,7 +5,7 @@ export const navLinks = {
     { label: "About", href: "/#about" },
   ],
   center: [
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "mailto:renjujoseph6@outlook.com" },
   ],
 };
 
@@ -121,7 +121,7 @@ export const footerData = {
     { label: "Home", href: "/#home" },
     { label: "Work", href: "/#projects" },
     { label: "About", href: "/#about" },
-    { label: "Contact", href: "/#contact" },
+    { label: "Contact", href: "mailto:renjujoseph6@outlook.com" },
   ],
   social: [
     {

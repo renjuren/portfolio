@@ -32,21 +32,21 @@ export default function DesignSystemCaseStudy() {
 
             {/* Metadata Strip */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
-              <div>
-                <span className="text-xs text-text-muted uppercase tracking-wider block mb-1">Client</span>
-                <span className="text-sm font-medium text-white">IDP Education</span>
+              <div className="flex flex-col">
+                <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1">Client</span>
+                <span className="text-base font-medium text-white">IDP Education</span>
               </div>
-              <div>
-                <span className="text-xs text-text-muted uppercase tracking-wider block mb-1">Role</span>
-                <span className="text-sm font-medium text-white">UX Designer · Design System Owner</span>
+              <div className="flex flex-col">
+                <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1">Role</span>
+                <span className="text-base font-medium text-white">UX Designer · Design System Owner</span>
               </div>
-              <div>
-                <span className="text-xs text-text-muted uppercase tracking-wider block mb-1">Year</span>
-                <span className="text-sm font-medium text-white">2025 – 2026</span>
+              <div className="flex flex-col">
+                <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1">Year</span>
+                <span className="text-base font-medium text-white">2025 – 2026</span>
               </div>
-              <div>
-                <span className="text-xs text-text-muted uppercase tracking-wider block mb-1">Scope</span>
-                <span className="text-sm font-medium text-white">Cross-product, cross-geography</span>
+              <div className="flex flex-col">
+                <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1">Scope</span>
+                <span className="text-base font-medium text-white">Cross-product, cross-geography</span>
               </div>
             </div>
 
@@ -141,9 +141,10 @@ export default function DesignSystemCaseStudy() {
                 
                 {/* Failure 1 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-start gap-3">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm">01</span>
-                    Variant sprawl that had become unmaintainable
+                  <h3 className="text-lg font-medium text-text-primary flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">01</span>
+                    <span className="mr-3 text-text-muted">—</span>
+                    <span>Variant sprawl that had become unmaintainable</span>
                   </h3>
                   <p>
                     The button component alone had over 100 variants — combinations of primary/secondary/outlined × normal/focused/hover/pressed × with-icon/without-icon, with no shared structure. Across the full system, we'd accumulated 1,519 component variants. Changing an icon inside a button required remembering the icon name and selecting a different variant entirely — there was no component-swap property. Frame loading on complex screens took 40–50 seconds.
@@ -152,9 +153,10 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 2 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-start gap-3">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm">02</span>
-                    A flat color palette masquerading as a token system
+                  <h3 className="text-lg font-medium text-text-primary flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">02</span>
+                    <span className="mr-3 text-text-muted">—</span>
+                    <span>A flat color palette masquerading as a token system</span>
                   </h3>
                   <p>
                     Colors existed as a primitive palette only — IDP-Blue-400, IDP-Blue-500, and so on — with no semantic layer telling designers where each color should be used. There were no surface tokens, no text tokens, no border tokens. Each designer made their own interpretation. Light and dark themes didn't exist.
@@ -163,9 +165,10 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 3 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-start gap-3">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm">03</span>
-                    WCAG failures across the palette
+                  <h3 className="text-lg font-medium text-text-primary flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">03</span>
+                    <span className="mr-3 text-text-muted">—</span>
+                    <span>WCAG failures across the palette</span>
                   </h3>
                   <p>
                     Because the primitives were defined for brand fidelity rather than accessibility, several color combinations the system implicitly allowed didn't pass contrast checks. Designers and engineers were unintentionally shipping inaccessible UI.
@@ -174,9 +177,10 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 4 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-start gap-3">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm">04</span>
-                    A growing gap between design and engineering
+                  <h3 className="text-lg font-medium text-text-primary flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">04</span>
+                    <span className="mr-3 text-text-muted">—</span>
+                    <span>A growing gap between design and engineering</span>
                   </h3>
                   <p>
                     The Figma design system and the engineering CSS library used different naming conventions for everything — including colors. Design sign-off became a debugging session. The engineering team had effectively stopped relying on the Figma system as a source of truth and was maintaining their own parallel reference.
@@ -185,9 +189,10 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 5 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-start gap-3">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm">05</span>
-                    Cross-geography divergence
+                  <h3 className="text-lg font-medium text-text-primary flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">05</span>
+                    <span className="mr-3 text-text-muted">—</span>
+                    <span>Cross-geography divergence</span>
                   </h3>
                   <p>
                     Without a strong semantic layer, regional teams improvised. The Partner Portal team in Chennai used numerical tokens (IDP-Blue-400, 500, 600). The Student Portal team used named tokens (IDP-Blue-Light, Dark, Darkest). Neither approach told a designer where to use which color. As a result, the same brand color appeared in completely different contexts across products, and the IDP visual identity fragmented.
@@ -532,7 +537,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 2 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Complexity Reduction</h4>
+                  <h4 className="font-semibold text-text-primary">Complexity{" "}Reduction</h4>
                   <p className="text-sm">
                     Component variants reduced from 1,519 to 112 — a 92% reduction. The button alone went from 100+ variants to a structured boolean-driven set. Icon swapping moved from name-based variant lookup to true component-swap property.
                   </p>
@@ -540,7 +545,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 3 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Performance Boost</h4>
+                  <h4 className="font-semibold text-text-primary">Performance{" "}Boost</h4>
                   <p className="text-sm">
                     Complex frames (data tables, dense dashboards) that previously took 40–50 seconds to load now load in under 10 seconds. This is the observed difference on the screens our team builds most often.
                   </p>
@@ -548,7 +553,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 4 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Engineering Velocity</h4>
+                  <h4 className="font-semibold text-text-primary">Engineering{" "}Velocity</h4>
                   <p className="text-sm">
                     The engineering manager I work most closely with estimated, based on her team's workload tracking, a 30–40% reduction in implementation time — driven by the design-to-code naming alignment and the MCP-propagated component sync.
                   </p>
@@ -556,7 +561,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 5 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Design Velocity with AI</h4>
+                  <h4 className="font-semibold text-text-primary">Design{" "}Velocity{" "}with{" "}AI</h4>
                   <p className="text-sm">
                     Designers using Figma Make and Google Stitch with the new design system as a constraint now generate production-ready output rather than ideation-only output. The team's qualitative estimate is that the design-to-handoff process is 30–50% faster for screens that fit the existing component set.
                   </p>
@@ -564,7 +569,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 6 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Accessibility Conformance</h4>
+                  <h4 className="font-semibold text-text-primary">Accessibility{" "}Conformance</h4>
                   <p className="text-sm">
                     Semantic tokens are designed to meet WCAG AA contrast standards by default; a subset meet AAA. Designers and AI tools consuming the system now produce accessible-by-default output instead of accessible-by-accident output.
                   </p>
@@ -572,7 +577,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 7 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Visual Consistency</h4>
+                  <h4 className="font-semibold text-text-primary">Visual{" "}Consistency</h4>
                   <p className="text-sm">
                     Visual divergence between Partner Portal and Student Portal — previously a recurring complaint — is no longer a recurring complaint. Designers don't detach components in working files because the slots and variant structure now accommodate the variations they used to detach for.
                   </p>

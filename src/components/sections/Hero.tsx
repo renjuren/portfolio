@@ -30,7 +30,7 @@ export default function Hero() {
         style={{ opacity: textOpacity }}
       >
         <h1 className="text-display mb-10 md:mb-12">
-          <AnimatedText text="Enterprise SaaS, designed for complexity." />
+          <AnimatedText text="Enterprise SaaS, designed for complexity." className="justify-center" />
         </h1>
         <ScrollReveal delay={0.4}>
           <p className="text-body-lg max-w-3xl mx-auto uppercase tracking-widest text-text-secondary">

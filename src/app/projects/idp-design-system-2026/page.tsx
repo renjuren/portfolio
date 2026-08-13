@@ -392,10 +392,10 @@ export default function DesignSystemCaseStudy() {
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
                 <p>
-                  This is the layer that made the system genuinely different from what existed before. Working with engineering, I established an MCP (Model Context Protocol) connection between the Figma file and the code repository. When tokens or components update in Figma, the AI tooling detects the change and surfaces it to the relevant engineering team. I used Claude AI to accelerate generating Angular component scaffolding from the Figma source; engineering reviewed and refined the generated code, and now owns it as a shipped component library.
+                  This is the layer that made the system genuinely different from what existed before. Working with engineering, I established an agentic design-to-code workflow: the Figma design system feeds AI agents through a published Figma Make Kit and a machine-readable component contract plus hardened guidelines. Using an MCP (Model Context Protocol) connection between the Figma file and the code repository, the AI agents generate production screens directly from the real components and design tokens — for both React and Angular products.
                 </p>
                 <p>
-                  The result: a designer updates a semantic token, and that change can propagate to the code repository through a chain that humans review but no longer have to manually translate. Production-ready code from AI tools now respects the IDP design system as a constraint, because the system is structured to be machine-readable.
+                  The result: a designer updates a semantic token or component in the Make Kit, and that change propagates to the code repository. AI agents consume the machine-readable contract to generate production-ready React and Angular screens that respect the design system constraints, with humans reviewing the output rather than manually translating designs.
                 </p>
               </div>
             </div>
@@ -418,8 +418,8 @@ export default function DesignSystemCaseStudy() {
                   <div className="w-10 h-10 bg-[#FF7262]/10 text-[#FF7262] rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0-.83.67-1.5 1.5-1.5h1.75c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5H14.5c-.83 0-1.5-.67-1.5-1.5zM7.5 11c-.83 0-1.5-.67-1.5-1.5V7.75C6 6.92 6.67 6.25 7.5 6.25S9 6.92 9 7.75v1.75c0 .83-.67 1.5-1.5 1.5zm7 0c-.83 0-1.5-.67-1.5-1.5V7.75c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v1.75c0 .83-.67 1.5-1.5 1.5z" /></svg>
                   </div>
-                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Figma Variables</h5>
-                  <p className="text-[10px] text-text-secondary mt-1">Design tokens & component schemas in Figma</p>
+                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Figma Make Kit</h5>
+                  <p className="text-[10px] text-text-secondary mt-1">Design tokens, system primitives, & Figma Make Kit</p>
                 </div>
 
                 {/* Arrow 1 */}
@@ -432,8 +432,8 @@ export default function DesignSystemCaseStudy() {
                   <div className="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>
                   </div>
-                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-white">MCP Bridge</h5>
-                  <p className="text-[10px] text-text-muted mt-1">Detects variables updates and parses token JSON</p>
+                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-white">Component Contract</h5>
+                  <p className="text-[10px] text-text-muted mt-1">Component contracts & guidelines parsed via MCP</p>
                 </div>
 
                 {/* Arrow 2 */}
@@ -446,14 +446,14 @@ export default function DesignSystemCaseStudy() {
                   <div className="w-10 h-10 bg-green-500/10 text-green-600 rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
                   </div>
-                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Angular Library</h5>
-                  <p className="text-[10px] text-text-secondary mt-1">Tokens compiled into SCSS variables & components in Git</p>
+                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Agentic Code</h5>
+                  <p className="text-[10px] text-text-secondary mt-1">AI agents generate React & Angular screens directly in Git</p>
                 </div>
               </div>
 
               <div className="mt-8 pt-6 border-t border-border-light flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="text-xs text-text-secondary">
-                  <strong className="text-text-primary">Automatic Sync:</strong> Token pushes in Figma auto-trigger style sheet compiling, keeping codebases 100% matched.
+                  <strong className="text-text-primary">Agentic Pipeline:</strong> Component contracts and Make Kit updates feed AI agents, generating production screens in real-time.
                 </div>
                 <span className="text-[10px] uppercase font-mono bg-green-100 text-green-800 px-3 py-1 rounded">Active Connection</span>
               </div>
@@ -665,10 +665,10 @@ export default function DesignSystemCaseStudy() {
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
                 <p>
-                  Two things stand out in hindsight.
+                  Three things stand out in hindsight.
                 </p>
                 <p>
-                  <strong>I'd build in Storybook in parallel with the Figma work</strong>, using Code Connect from day one. I built the Figma side first and the code side later. That sequence worked, but it added a translation layer that didn't need to exist. If Storybook and Code Connect were live from the first component, design-to-code parity would have been a property of the system, not a goal to retrofit.
+                  <strong>I'd define the machine-readable component contracts and Figma Make Kit in parallel with the core Figma work</strong>, enabling agentic generation from day one. I built the Figma design system first and structured the AI contracts later. If the component contracts and guidelines were defined alongside the initial design system build, we could have enabled AI agents to generate production screens directly from the start, rather than retrofitting AI constraints onto existing components.
                 </p>
                 <p>
                   <strong>I'd build sub-brand-aware components from the start.</strong> The current system serves the unified IDP brand cleanly, but as IDP evolves toward more sub-brand-differentiated products, I'm now retrofitting variation into components that were designed for uniformity.

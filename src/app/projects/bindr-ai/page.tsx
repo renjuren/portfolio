@@ -2,29 +2,9 @@
 
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import Image from "next/image";
 import Link from "next/link";
 import ScrollReveal from "@/components/ui/ScrollReveal";
-
-// Helper component for visual dashed-border placeholders
-function ImagePlaceholder({
-  title,
-  aspect = "aspect-[16/10]",
-  description
-}: {
-  title: string;
-  aspect?: string;
-  description?: string;
-}) {
-  return (
-    <div className={`relative w-full ${aspect} bg-bg-light border border-dashed border-border-light rounded-sm flex flex-col items-center justify-center p-6 text-center shadow-sm transition-all duration-300 hover:border-text-primary/30`}>
-      <svg className="w-8 h-8 text-text-muted mb-3" fill="none" stroke="currentColor" strokeWidth="1" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.409a2.25 2.25 0 013.182 0l2.909 2.909m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
-      </svg>
-      <span className="text-sm font-medium text-text-primary mb-1">{title}</span>
-      {description && <span className="text-xs text-text-muted max-w-sm mt-1">{description}</span>}
-    </div>
-  );
-}
 
 export default function BindrAICaseStudy() {
   return (
@@ -97,14 +77,19 @@ export default function BindrAICaseStudy() {
           </div>
         </section>
 
-        {/* 2. FEATURED COVER IMAGE PLACEHOLDER */}
+        {/* 2. FEATURED COVER IMAGE */}
         <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16 flex justify-center">
           <ScrollReveal delay={0.2} className="w-[1024px] max-w-full">
-            <ImagePlaceholder
-              title="hero-dashboard.png"
-              aspect="aspect-[16/10]"
-              description="Homepage hero dashboard mockup displaying task approval workflows, a people directory sidebar navigation, and a Watch a Demo CTA trigger overlay."
-            />
+            <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-xl">
+              <Image
+                src="/images/hero-dashboard.png"
+                alt="Case Study: Bindr.AI Small Business Operations Platform"
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
           </ScrollReveal>
         </section>
 
@@ -181,11 +166,15 @@ export default function BindrAICaseStudy() {
                   To communicate this transformation on the landing page, we mapped a direct before-and-after interactive comparison table, illustrating how consolidating fragmented apps clears admin load.
                 </p>
                 <div className="pt-6">
-                  <ImagePlaceholder
-                    title="before-after.png"
-                    aspect="aspect-[16/9]"
-                    description="Before and after transformation table mapping legacy app overhead against Bindr.AI's unified workflow."
-                  />
+                  <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <Image
+                      src="/images/before-after.png"
+                      alt="Bindr.AI Before and After comparison matrix"
+                      fill
+                      className="object-cover"
+                      sizes="(max-width: 1024px) 100vw, 768px"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -262,11 +251,15 @@ export default function BindrAICaseStudy() {
                     Worksheets and options utilize soft rounded cards with drop shadows. Standard icons sit inside light coral or pink tint chips to anchor scannable grids. The marketing narrative uses flat vector illustrations in the brand palette, contrasted with real screenshots for technical workflows.
                   </p>
                   <div className="pt-4">
-                    <ImagePlaceholder
-                      title="about-illustration.png"
-                      aspect="aspect-[16/10]"
-                      description="About page illustration of founders setting up operations, in the coral and gray brand color scheme."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/about-illustration.png"
+                        alt="Bindr.AI flat illustration for team collaboration"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -296,11 +289,15 @@ export default function BindrAICaseStudy() {
                     The home dashboard organizes open tasks, pending document approvals, and timesheets into a single feed. Sidebar shortcuts group HR, organizational charts, and payroll tools.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="product-task-dashboard.png"
-                      aspect="aspect-[16/10]"
-                      description="In-app dashboard workspace showing timesheets approvals, member onboarding tasks, and team checklist status."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/product-task-dashboard.png"
+                        alt="In-app task and approval workflow screen"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -311,11 +308,15 @@ export default function BindrAICaseStudy() {
                     A step-by-step interactive accordion walks operators through adding team members, setting up direct single sign-ons, selecting marketplace widgets, and assigning delegate duties.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="how-it-works-accordion.png"
-                      aspect="aspect-[16/10]"
-                      description="Step-by-step operational setup accordion showing the Single Sign-On configuration panel in an expanded view."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/how-it-works-accordion.png"
+                        alt="Setup accordion showing Single Sign-On workspace"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -326,11 +327,15 @@ export default function BindrAICaseStudy() {
                     The application marketplace lists widgets for timesheet tracking, e-signatures, safety checkins, expense logs, and payroll calculations.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="marketplace-grid.png"
-                      aspect="aspect-[16/10]"
-                      description="Grid view of the Bindr.AI app store, displaying cards and pink background icons for various operations tools."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/marketplace-grid.png"
+                        alt="App store displaying customizable service integrations"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -341,11 +346,15 @@ export default function BindrAICaseStudy() {
                     A dedicated security grid details advanced client data protection, role access authorization, and secure backups, instilling startup confidence.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="security-trust.png"
-                      aspect="aspect-[16/9]"
-                      description="Data protection and privacy panel displaying data encryption, secure login protocols, and safety badges."
-                    />
+                    <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/security-trust.png"
+                        alt="Data security and protection encryption indicators"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -356,11 +365,15 @@ export default function BindrAICaseStudy() {
                     High-level trackers allow managers to publish team goals and lock sensitive performance reviews behind security scopes.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="product-goals.png"
-                      aspect="aspect-[16/10]"
-                      description="Goals and objectives tracker dashboard displaying OKR indicators and lock overlays on sensitive performance metrics."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/product-goals.png"
+                        alt="Goals and OKRs interface displaying team objectives"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -371,11 +384,15 @@ export default function BindrAICaseStudy() {
                     A clean 3-tier matrix outlines pricing options, letting businesses choose between the free tier, core utilities, or customized developer additions.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="pricing-tiers.png"
-                      aspect="aspect-[16/10]"
-                      description="Transparent subscription matrices displaying details and costs for Basic, Essential, and Advanced tiers."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/pricing-tiers.png"
+                        alt="Pricing options presenting Basic, Essential, and Advanced tiers"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 
@@ -386,11 +403,15 @@ export default function BindrAICaseStudy() {
                     Presents responsive screens for on-the-go managers. Timesheet details, onboarding tasks, and company structures align automatically to mobile dimensions.
                   </p>
                   <div className="pt-2">
-                    <ImagePlaceholder
-                      title="mobile-screens.png"
-                      aspect="aspect-[16/10]"
-                      description="Timesheets tracking, organization structure, and employee dashboard screens adapted to stacked smartphone interfaces."
-                    />
+                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                      <Image
+                        src="/images/mobile-screens.png"
+                        alt="Timesheets, kiosk, and dashboard workflows on stacked smartphone displays"
+                        fill
+                        className="object-cover"
+                        sizes="(max-width: 1024px) 100vw, 768px"
+                      />
+                    </div>
                   </div>
                 </div>
 

@@ -42,6 +42,14 @@ export const projects = [
     href: "/projects/netrocon-digital",
   },
   {
+    title: "Bindr.AI",
+    category: "Product Design & SaaS Architecture",
+    tags: ["Product Design"],
+    year: "2020",
+    image: "/images/hero-dashboard.png",
+    href: "/projects/bindr-ai",
+  },
+  {
     title: "SMAT: Social Audio Platform",
     category: "Product Strategy & Full-Stack Design",
     tags: ["Product Design", "Product Strategy"],

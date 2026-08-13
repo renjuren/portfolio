@@ -708,13 +708,11 @@ export default function DesignSystemCaseStudy() {
               NEXT CASE STUDY
             </span>
             <Link
-              href="https://renjujoseph.framer.website/projects/smat-social-sync-platform"
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/projects/idp-partner-portal-rbac"
               className="inline-block group"
             >
               <h2 className="text-3xl md:text-5xl font-light hover:text-white transition-colors duration-300 mb-6 group-hover:translate-x-1 inline-flex items-center gap-4">
-                <span>SMAT: Social Sync Platform</span>
+                <span>Access Management (RBAC)</span>
                 <svg className="w-8 h-8 text-text-muted group-hover:text-white transition-colors duration-300 transform group-hover:translate-x-2" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>

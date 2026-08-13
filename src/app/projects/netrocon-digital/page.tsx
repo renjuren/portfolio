@@ -482,21 +482,6 @@ export default function NetroconCaseStudy() {
                 <p>
                   The red highlighter visual motif proved to be the magic component that unified the pages. It bound visual photography portfolios, complex staffing forms, and SaaS pricing grids into a single, cohesive brand voice.
                 </p>
-                <p className="text-text-secondary italic">
-                  Easter Egg: The live Netrocon website still carries an unbuilt "Case Study" link in its navigation library. This case study write-up serves to document that work and close the loop.
-                </p>
-
-                {/* 
-                TODO: User Personal Reflections / Retrospective Notes
-                You can insert your personal reflections, things you would do differently,
-                or post-launch learnings here:
-                */}
-                <div className="border-l-2 border-[#FB1D24] pl-4 py-1 my-6 text-text-secondary italic">
-                  <span className="block text-xs uppercase tracking-widest font-mono text-text-muted not-italic mb-1">Your Reflections</span>
-                  <p className="text-sm">
-                    [Click to edit: Insert your personal learnings, retrospective details, or what you would change about the 2022 Netrocon design system today here.]
-                  </p>
-                </div>
               </div>
             </div>
           </div>

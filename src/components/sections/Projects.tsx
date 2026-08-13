@@ -17,7 +17,7 @@ export default function Projects() {
   };
 
   const visibleProjects = projects.filter(
-    (project) => project.title === "Enterprise Design System"
+    (project) => project.href.startsWith("/projects")
   );
 
   return (

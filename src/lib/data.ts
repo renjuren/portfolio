@@ -26,6 +26,14 @@ export const projects = [
     href: "/projects/idp-design-system-2026",
   },
   {
+    title: "Access Management (RBAC)",
+    category: "B2B Enterprise Access Architecture",
+    tags: ["Product Design"],
+    year: "2025",
+    image: "/images/rbac-cover.png",
+    href: "/projects/idp-partner-portal-rbac",
+  },
+  {
     title: "SMAT: Social Audio Platform",
     category: "Product Strategy & Full-Stack Design",
     tags: ["Product Design", "Product Strategy"],

@@ -208,6 +208,15 @@ export default function AccessManagementCaseStudy() {
                 <p className="text-text-secondary italic">
                   Why this matters: university administrators can customize and manage Groups on their own, but they cannot author new Roles. Roles are governed centrally by IDP. This structural boundaries prevent privilege creep while granting partners the autonomy they need to orchestrate their teams. When users belong to multiple groups, their combined access is evaluated as the union of those groups' roles.
                 </p>
+                <div className="relative w-full aspect-[16/7] bg-white border border-border-light rounded overflow-hidden mt-6">
+                  <Image
+                    src="/images/rbac-core-model.png"
+                    alt="The Access Model: User to Group to Role to Permission"
+                    fill
+                    className="object-contain p-4"
+                    sizes="(max-width: 1024px) 100vw, 768px"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -328,15 +337,6 @@ export default function AccessManagementCaseStudy() {
                   <p>
                     Based on selected permission profiles, the system suggests pre-configured groups, labeling the "best match" alongside detail summaries of what access the recommended groups provide.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
-                    <Image
-                      src="/images/recommended-groups.png"
-                      alt="Flow: Recommended system groups recommendations"
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1024px) 100vw, 768px"
-                    />
-                  </div>
                 </div>
 
                 {/* Flow 4 */}
@@ -345,15 +345,6 @@ export default function AccessManagementCaseStudy() {
                   <p>
                     Power users can select groups directly from a data table displaying role details and tooltips, while selected choices display as dismissible visual chips.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
-                    <Image
-                      src="/images/group-selection-table.png"
-                      alt="Flow: Direct group selection table and chips"
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1024px) 100vw, 768px"
-                    />
-                  </div>
                 </div>
 
                 {/* Flow 5 */}
@@ -362,15 +353,6 @@ export default function AccessManagementCaseStudy() {
                   <p>
                     A step-by-step setup wizard (Name → Add Roles → Assign People → Review) allows administrators to compose custom teams. The final review screen previews combined privileges and flags potential over-provisioning issues.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
-                    <Image
-                      src="/images/create-group-flow.png"
-                      alt="Flow: Step-by-step custom group creation wizard"
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1024px) 100vw, 768px"
-                    />
-                  </div>
                 </div>
 
                 {/* Flow 6 */}
@@ -379,24 +361,6 @@ export default function AccessManagementCaseStudy() {
                   <p>
                     The management surface keeps system-governed roles locked under safe defaults while allowing custom groups to be edited or deleted. The deletion flow lists which users will lose access and requires reassignment details.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
-                    <Image
-                      src="/images/groups-list.png"
-                      alt="Flow: Teams list and dashboard interface"
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1024px) 100vw, 768px"
-                    />
-                  </div>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
-                    <Image
-                      src="/images/group-delete-modal.png"
-                      alt="Flow: Delete confirmation modal with impact warning"
-                      fill
-                      className="object-contain p-4"
-                      sizes="(max-width: 1024px) 100vw, 768px"
-                    />
-                  </div>
                 </div>
 
                 {/* Flow 7 */}

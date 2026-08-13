@@ -104,17 +104,17 @@ export default function DesignSystemCaseStudy() {
                 <p>
                   IDP Education is a global study-abroad and IELTS examination organization headquartered in Melbourne, with partner universities across the world and offices in Chennai, London, Melbourne, and Taipei. Internally, the product organization is split across three domains: a Partner Portal (the B2B platform our university partners use to manage marketing campaigns, landing pages, and student orders), a Student Portal (the B2C platform for student recruitment), and IELTS (a separately-governed product with its own design system, outside the scope of this work).
                 </p>
-                <p>
-                  I work primarily on the Partner Portal and its sub-products. The design system I built spans Partner Portal and Student Portal — every IDP-owned product except IELTS. That's 12 designers across four cities and 50+ engineers consuming the system globally.
+                 <p>
+                  I work primarily on the Partner Portal and its sub-products. The design system I built spans Partner Portal and Student Portal, covering every IDP-owned product except IELTS. That's 12 designers across four cities and 50+ engineers consuming the system globally.
                 </p>
                 <p>
-                  Three years ago, when IDP migrated from XD and Sketch to Figma, the team needed a design system fast. I built the first version — but under time pressure, we customized on top of a purchased third-party base rather than building from scratch. It shipped. It served us. And over three years, I watched exactly how it broke down.
+                  Three years ago, when IDP migrated from XD and Sketch to Figma, the team needed a design system fast. I built the first version, but under time pressure, we customized on top of a purchased third-party base rather than building from scratch. It shipped. It served us. And over three years, I watched exactly how it broke down.
                 </p>
                 <p>
                   Designers in Chennai, London, and Melbourne diverged on color usage. The engineering team started maintaining a parallel CSS library to work around inconsistencies. Frame load times in Figma crept up as the component count ballooned past 1,500 variants. The system became increasingly incompatible with the AI tooling the org started experimenting with in 2024.
                 </p>
                 <p>
-                  By early 2025, the cracks were no longer ignorable. The Head of UX flagged the inconsistency. I'd already been mapping the failure modes for months. I proposed rebuilding from scratch — owned end-to-end this time, not customized over a purchased base — designed for AI-readability and engineering parity from day one. Leadership approved in January 2025. Build began in November 2025, after ten months of research and stakeholder alignment across the four geographies.
+                  By early 2025, the cracks were no longer ignorable. The Head of UX flagged the inconsistency. I'd already been mapping the failure modes for months. I proposed rebuilding from scratch: owned end-to-end this time, not customized over a purchased base, designed for AI-readability and engineering parity from day one. Leadership approved in January 2025. Build began in November 2025, after ten months of research and stakeholder alignment across the four geographies.
                 </p>
               </div>
             </div>
@@ -143,11 +143,10 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium text-text-primary flex items-center">
                     <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">01</span>
-                    <span className="mr-3 text-text-muted">—</span>
                     <span>Variant sprawl that had become unmaintainable</span>
                   </h3>
                   <p>
-                    The button component alone had over 100 variants — combinations of primary/secondary/outlined × normal/focused/hover/pressed × with-icon/without-icon, with no shared structure. Across the full system, we'd accumulated 1,519 component variants. Changing an icon inside a button required remembering the icon name and selecting a different variant entirely — there was no component-swap property. Frame loading on complex screens took 40–50 seconds.
+                    The button component alone had over 100 variants, combinations of primary/secondary/outlined × normal/focused/hover/pressed × with-icon/without-icon, with no shared structure. Across the full system, we'd accumulated 1,519 component variants. Changing an icon inside a button required remembering the icon name and selecting a different variant entirely: there was no component-swap property. Frame loading on complex screens took 40–50 seconds.
                   </p>
                 </div>
 
@@ -155,11 +154,10 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium text-text-primary flex items-center">
                     <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">02</span>
-                    <span className="mr-3 text-text-muted">—</span>
                     <span>A flat color palette masquerading as a token system</span>
                   </h3>
                   <p>
-                    Colors existed as a primitive palette only — IDP-Blue-400, IDP-Blue-500, and so on — with no semantic layer telling designers where each color should be used. There were no surface tokens, no text tokens, no border tokens. Each designer made their own interpretation. Light and dark themes didn't exist.
+                    Colors existed as a primitive palette only, consisting of IDP-Blue-400, IDP-Blue-500, and so on, with no semantic layer telling designers where each color should be used. There were no surface tokens, no text tokens, no border tokens. Each designer made their own interpretation. Light and dark themes didn't exist.
                   </p>
                 </div>
 
@@ -167,7 +165,6 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium text-text-primary flex items-center">
                     <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">03</span>
-                    <span className="mr-3 text-text-muted">—</span>
                     <span>WCAG failures across the palette</span>
                   </h3>
                   <p>
@@ -179,11 +176,10 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium text-text-primary flex items-center">
                     <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">04</span>
-                    <span className="mr-3 text-text-muted">—</span>
                     <span>A growing gap between design and engineering</span>
                   </h3>
                   <p>
-                    The Figma design system and the engineering CSS library used different naming conventions for everything — including colors. Design sign-off became a debugging session. The engineering team had effectively stopped relying on the Figma system as a source of truth and was maintaining their own parallel reference.
+                    The Figma design system and the engineering CSS library used different naming conventions for everything, including colors. Design sign-off became a debugging session. The engineering team had effectively stopped relying on the Figma system as a source of truth and was maintaining their own parallel reference.
                   </p>
                 </div>
 
@@ -191,7 +187,6 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-3">
                   <h3 className="text-lg font-medium text-text-primary flex items-center">
                     <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">05</span>
-                    <span className="mr-3 text-text-muted">—</span>
                     <span>Cross-geography divergence</span>
                   </h3>
                   <p>
@@ -251,7 +246,7 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-2">
                   <h4 className="font-medium text-text-primary">2. Cross-domain governance</h4>
                   <p>
-                    The Partner Portal and Student Portal serve fundamentally different audiences (B2B partners vs. B2C students). The Student Portal team initially argued for visual differentiation through color — a reasonable instinct, but one that, in practice, had produced fragmentation rather than differentiation. The case for a unified system had to be made on technical and accessibility grounds, not just visual ones.
+                    The Partner Portal and Student Portal serve fundamentally different audiences (B2B partners vs. B2C students). The Student Portal team initially argued for visual differentiation through color, which was a reasonable instinct, but in practice, it had produced fragmentation rather than differentiation. The case for a unified system had to be made on technical and accessibility grounds, not just visual ones.
                   </p>
                 </div>
 
@@ -298,7 +293,7 @@ export default function DesignSystemCaseStudy() {
                   {/* Layer 1 */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary font-mono">
-                      Layer 1 — Research & Alignment
+                      Layer 1: Research & Alignment
                     </h4>
                     <p>
                       Ten months before building, I spent time understanding three things: how each regional team was actually using (or working around) the existing system; what the engineering team needed for the design-to-code sync to function; and how mature design systems at IBM, Atlassian, and Microsoft structured primitive and semantic tokens. Figma's advancements in variables and modes during 2024 became the technical foundation.
@@ -308,13 +303,13 @@ export default function DesignSystemCaseStudy() {
                   {/* Layer 2 */}
                   <div className="space-y-2">
                     <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary font-mono">
-                      Layer 2 — Token Architecture
+                      Layer 2: Token Architecture
                     </h4>
                     <p>
-                      I built a two-tier token taxonomy. Primitives — raw color values, raw spacing values, raw type sizes — are only accessible to design system admins and managers. Semantics — Surface/Default, Surface/Subtle, Text/Primary, Border/Strong, Action/Primary — are what every designer and engineer actually uses.
+                      I built a two-tier token taxonomy. Primitives, raw color values, raw spacing values, raw type sizes, are only accessible to design system admins and managers. Semantics, Surface/Default, Surface/Subtle, Text/Primary, Border/Strong, Action/Primary, are what every designer and engineer actually uses.
                     </p>
                     <p className="text-text-secondary italic">
-                      The reason this matters: when primitives are exposed to consumers, people pick colors by what looks right. When semantics are exposed, people pick colors by what they mean — and meaning enforces consistency. Light and dark themes became one-click swaps because the semantic layer already encoded where each color belonged. Accessibility became the default rather than the exception.
+                      The reason this matters: when primitives are exposed to consumers, people pick colors by what looks right. When semantics are exposed, people pick colors by what they mean, and meaning enforces consistency. Light and dark themes became one-click swaps because the semantic layer already encoded where each color belonged. Accessibility became the default rather than the exception.
                     </p>
                   </div>
                 </div>
@@ -346,14 +341,14 @@ export default function DesignSystemCaseStudy() {
                 [05] Architecture
               </span>
               <h2 className="text-heading text-text-primary">
-                Layer 3 — Components
+                Layer 3: Components
               </h2>
             </div>
             
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
                 <p>
-                  I rebuilt the base components — buttons, inputs, icons, spacing primitives — from scratch using Figma's current best practices: boolean properties, component-swap for icons, variant structures that collapse combinatorial explosion into composable properties. The button went from 100+ variants to a structured set with boolean toggles for icon, state, and size. Total system variant count dropped from 1,519 to 112.
+                  I rebuilt the base components, buttons, inputs, icons, spacing primitives, from scratch using Figma's current best practices: boolean properties, component-swap for icons, variant structures that collapse combinatorial explosion into composable properties. The button went from 100+ variants to a structured set with boolean toggles for icon, state, and size. Total system variant count dropped from 1,519 to 112.
                 </p>
                 <p>
                   Regional design teams now build their own product-specific components on top of this base. I review every contribution to keep naming and structure aligned with engineering conventions.
@@ -385,14 +380,14 @@ export default function DesignSystemCaseStudy() {
                 [06] Tooling
               </span>
               <h2 className="text-heading text-text-primary">
-                Layer 4 — AI & Code Integration
+                Layer 4: AI & Code Integration
               </h2>
             </div>
             
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
                 <p>
-                  This is the layer that made the system genuinely different from what existed before. Working with engineering, I established an agentic design-to-code workflow: the Figma design system feeds AI agents through a published Figma Make Kit and a machine-readable component contract plus hardened guidelines. Using an MCP (Model Context Protocol) connection between the Figma file and the code repository, the AI agents generate production screens directly from the real components and design tokens — for both React and Angular products.
+                  This is the layer that made the system genuinely different from what existed before. Working with engineering, I established an agentic design-to-code workflow: the Figma design system feeds AI agents through a published Figma Make Kit and a machine-readable component contract plus hardened guidelines. Using an MCP (Model Context Protocol) connection between the Figma file and the code repository, the AI agents generate production screens directly from the real components and design tokens for both React and Angular products.
                 </p>
                 <p>
                   The result: a designer updates a semantic token or component in the Make Kit, and that change propagates to the code repository. AI agents consume the machine-readable contract to generate production-ready React and Angular screens that respect the design system constraints, with humans reviewing the output rather than manually translating designs.
@@ -479,19 +474,19 @@ export default function DesignSystemCaseStudy() {
                   The hardest call wasn't technical. It was the migration strategy.
                 </p>
                 <p>
-                  <strong>Option A</strong> was a hard cutover — deprecate the old system on a fixed date, require every team to migrate within a quarter. Fast, clean, painful, and likely to fail given mid-sprint integrations and the cross-product dependencies.
+                  <strong>Option A</strong> was a hard cutover: deprecate the old system on a fixed date, requiring every team to migrate within a quarter. Fast, clean, painful, and likely to fail given mid-sprint integrations and the cross-product dependencies.
                 </p>
                 <p>
-                  <strong>Option B</strong> was indefinite backward compatibility — let teams adopt at their own pace. Safe, low-friction, and likely to result in a half-migrated system that never reached consolidation.
+                  <strong>Option B</strong> was indefinite backward compatibility, letting teams adopt at their own pace. Safe, low-friction, and likely to result in a half-migrated system that never reached consolidation.
                 </p>
                 <p>
-                  I chose a <strong>third path</strong>: gradual migration, sequenced by product readiness, with a six-month soft deadline. When a product team had upcoming sprint bandwidth, we used that window to migrate them. Sequencing was decided by integration complexity — tightly coupled products were migrated together; standalone products went first to build confidence. Within six months, almost all products were on the new system.
+                  I chose a <strong>third path</strong>: gradual migration, sequenced by product readiness, with a six-month soft deadline. When a product team had upcoming sprint bandwidth, we used that window to migrate them. Sequencing was decided by integration complexity: tightly coupled products were migrated together; standalone products went first to build confidence. Within six months, almost all products were on the new system.
                 </p>
                 <p className="italic text-text-secondary">
                   What I gave up: speed, and the cleanliness of a single cutover date. What I gained: actual adoption. The old system isn't dead today, but it's no longer the source of truth for any active product.
                 </p>
                 <p>
-                  A separate trade-off worth naming: the color palette itself. IDP has a dedicated branding team that owns brand color decisions. I raised UX concerns about visual homogeneity across some contexts, but the branding decision wasn't mine to make. I worked within the palette I was given, and where I could push, I added UI action colors that the brand team hadn't originally specified — by demonstrating the UX cost of not having them. Design systems are partly a negotiation; this one was.
+                  A separate trade-off worth naming: the color palette itself. IDP has a dedicated branding team that owns brand color decisions. I raised UX concerns about visual homogeneity across some contexts, but the branding decision wasn't mine to make. I worked within the palette I was given, and where I could push, I added UI action colors that the brand team hadn't originally specified, demonstrating the UX cost of not having them. Design systems are partly a negotiation; this one was.
                 </p>
               </div>
             </div>
@@ -539,7 +534,7 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-1">
                   <h4 className="font-semibold text-text-primary">Complexity{" "}Reduction</h4>
                   <p className="text-sm">
-                    Component variants reduced from 1,519 to 112 — a 92% reduction. The button alone went from 100+ variants to a structured boolean-driven set. Icon swapping moved from name-based variant lookup to true component-swap property.
+                    Component variants reduced from 1,519 to 112, representing a 92% reduction. The button alone went from 100+ variants to a structured boolean-driven set. Icon swapping moved from name-based variant lookup to true component-swap property.
                   </p>
                 </div>
 
@@ -555,7 +550,7 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-1">
                   <h4 className="font-semibold text-text-primary">Engineering{" "}Velocity</h4>
                   <p className="text-sm">
-                    The engineering manager I work most closely with estimated, based on her team's workload tracking, a 30–40% reduction in implementation time — driven by the design-to-code naming alignment and the MCP-propagated component sync.
+                    The engineering manager I work most closely with estimated, based on her team's workload tracking, a 30–40% reduction in implementation time, driven by the design-to-code naming alignment and the MCP-propagated component sync.
                   </p>
                 </div>
 
@@ -579,7 +574,7 @@ export default function DesignSystemCaseStudy() {
                 <div className="space-y-1">
                   <h4 className="font-semibold text-text-primary">Visual{" "}Consistency</h4>
                   <p className="text-sm">
-                    Visual divergence between Partner Portal and Student Portal — previously a recurring complaint — is no longer a recurring complaint. Designers don't detach components in working files because the slots and variant structure now accommodate the variations they used to detach for.
+                    Visual divergence between Partner Portal and Student Portal, previously a recurring complaint, is no longer a recurring complaint. Designers don't detach components in working files because the slots and variant structure now accommodate the variations they used to detach for.
                   </p>
                 </div>
 
@@ -696,10 +691,10 @@ export default function DesignSystemCaseStudy() {
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
                 <p>
-                  The current system serves IDP's non-IELTS products with a single brand. My longer-term vision is a unified IDP design system that includes both the in-house products and IELTS — with sub-brand modes that let a single component library produce IDP-branded and IELTS-branded surfaces with a single appearance swap, the same way light and dark themes work today.
+                  The current system serves IDP's non-IELTS products with a single brand. My longer-term vision is a unified IDP design system that includes both the in-house products and IELTS, using sub-brand modes that let a single component library produce IDP-branded and IELTS-branded surfaces with a single appearance swap, the same way light and dark themes work today.
                 </p>
                 <p>
-                  That requires alignment beyond the design team — IELTS has different governance — but the technical foundation is now in place to support it.
+                  That requires alignment beyond the design team since IELTS has different governance, but the technical foundation is now in place to support it.
                 </p>
               </div>
             </div>

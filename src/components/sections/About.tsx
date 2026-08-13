@@ -20,7 +20,7 @@ export default function About() {
                 <div className="relative aspect-[4/5] w-full max-w-lg overflow-hidden rounded-sm">
                   <Image
                     src="/images/profile.jpg"
-                    alt="Renju Joseph — Senior Product Designer"
+                    alt="Renju Joseph, Senior Product Designer"
                     fill
                     className="object-cover"
                     sizes="(max-width: 1024px) 100vw, 60vw"
@@ -36,7 +36,7 @@ export default function About() {
                   <div className="relative w-64 lg:w-72 aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
                     <Image
                       src="/images/project-eds.png"
-                      alt="Enterprise Design System — Featured project"
+                      alt="Enterprise Design System, featured project"
                       fill
                       className="object-cover"
                       sizes="300px"
@@ -68,7 +68,7 @@ export default function About() {
             <ScrollReveal delay={0.4}>
               <p className="text-body mb-8">
                 With a background in motion and photography, I build
-                high-fidelity prototypes that don&apos;t just look good — they
+                high-fidelity prototypes that don&apos;t just look good, they
                 validate business hypotheses and reduce development friction.
               </p>
             </ScrollReveal>

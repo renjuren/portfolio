@@ -48,7 +48,7 @@ export default function Hero() {
           >
             <Image
               src="/images/project-design-system-v5.png"
-              alt="Enterprise Design System scaling — featured key project by Renju Joseph"
+              alt="Enterprise Design System scaling, featured key project by Renju Joseph"
               fill
               priority
               className="object-contain"

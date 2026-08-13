@@ -72,7 +72,7 @@ export const expertiseItems = [
     title: "UX/UI Design",
     image: "/images/project-design-system-v5.png",
     description:
-      "I craft intuitive interfaces for complex enterprise platforms — simplifying data-dense workflows without sacrificing power. Every pixel serves a purpose, every interaction feels natural.",
+      "I craft intuitive interfaces for complex enterprise platforms, simplifying data-dense workflows without sacrificing power. Every pixel serves a purpose, every interaction feels natural.",
     services: [
       "User Interface Design",
       "Interaction Design",
@@ -86,7 +86,7 @@ export const expertiseItems = [
     title: "Product Strategy",
     image: "/images/project-smat.png",
     description:
-      "I bridge the gap between complex engineering constraints and intuitive user needs — aligning business goals, user research, and technical feasibility into a cohesive product vision.",
+      "I bridge the gap between complex engineering constraints and intuitive user needs, aligning business goals, user research, and technical feasibility into a cohesive product vision.",
     services: [
       "Product Discovery & Definition",
       "User Research & Persona Development",
@@ -100,7 +100,7 @@ export const expertiseItems = [
     title: "Motion & Prototyping",
     image: "/images/project-revenuehero.png",
     description:
-      "With a background in motion and photography, I build high-fidelity prototypes that don't just look good — they validate business hypotheses and reduce development friction.",
+      "With a background in motion and photography, I build high-fidelity prototypes that don't just look good, they validate business hypotheses and reduce development friction.",
     services: [
       "Motion Design for UI",
       "Rapid Prototyping",

@@ -34,7 +34,7 @@ export default function SectionLabel({
             light ? "text-text-muted" : "text-text-secondary"
           }`}
         >
-          — {title}
+          · {title}
         </span>
       )}
     </motion.div>

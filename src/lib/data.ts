@@ -34,6 +34,14 @@ export const projects = [
     href: "/projects/idp-partner-portal-rbac",
   },
   {
+    title: "Netrocon Digital",
+    category: "Product Strategy & Full-Stack Design",
+    tags: ["Product Design"],
+    year: "2022",
+    image: "/images/netrocon-home.png",
+    href: "/projects/netrocon-digital",
+  },
+  {
     title: "SMAT: Social Audio Platform",
     category: "Product Strategy & Full-Stack Design",
     tags: ["Product Design", "Product Strategy"],

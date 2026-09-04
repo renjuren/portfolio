@@ -12,7 +12,7 @@ export default function DesignSystemCaseStudy() {
   return (
     <>
       <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen">
+      <main className="bg-bg-light min-h-screen overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
         <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
@@ -73,9 +73,9 @@ export default function DesignSystemCaseStudy() {
           </div>
         </section>
 
-        <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16 flex justify-center">
-          <ScrollReveal delay={0.2}>
-            <div className="relative w-[1024px] max-w-full aspect-[1024/448] overflow-hidden">
+        <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16">
+          <ScrollReveal delay={0.2} className="w-full max-w-[1024px] mx-auto">
+            <div className="relative w-full aspect-[1024/448] overflow-hidden">
               <Image
                 src="/images/eds-case-study-1.png"
                 alt="Case Study: IDP Design System 2026 - Variant count reduction"
@@ -202,9 +202,9 @@ export default function DesignSystemCaseStudy() {
           </div>
         </section>
 
-        <section className="container-max py-8 md:py-12 flex justify-center">
-          <ScrollReveal delay={0.1}>
-            <div className="relative w-[1024px] max-w-full aspect-[1024/576] overflow-hidden">
+        <section className="container-max py-8 md:py-12">
+          <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
+            <div className="relative w-full aspect-[1024/576] overflow-hidden">
               <Image
                 src="/images/eds-case-study-2.png"
                 alt="92% fewer variants. Same coverage."
@@ -319,9 +319,9 @@ export default function DesignSystemCaseStudy() {
           </div>
         </section>
 
-        <section className="container-max py-8 flex justify-center">
-          <ScrollReveal delay={0.1}>
-            <div className="relative w-[1024px] max-w-full aspect-[1024/755] overflow-hidden">
+        <section className="container-max py-8">
+          <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
+            <div className="relative w-full aspect-[1024/755] overflow-hidden">
               <Image
                 src="/images/eds-case-study-3.png"
                 alt="Two-tier Token Architecture - Primitives mapped to Semantics"
@@ -358,9 +358,9 @@ export default function DesignSystemCaseStudy() {
           </div>
         </section>
 
-        <section className="container-max py-8 flex justify-center">
-          <ScrollReveal delay={0.1}>
-            <div className="relative w-[1024px] max-w-full aspect-[1024/691] overflow-hidden">
+        <section className="container-max py-8">
+          <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
+            <div className="relative w-full aspect-[1024/691] overflow-hidden">
               <Image
                 src="/images/eds-case-study-4.png"
                 alt="Component simplification: Button variants before and after"
@@ -493,9 +493,9 @@ export default function DesignSystemCaseStudy() {
           </div>
         </section>
 
-        <section className="container-max py-8 flex justify-center">
-          <ScrollReveal delay={0.1}>
-            <div className="relative w-[1024px] max-w-full aspect-[1024/486] overflow-hidden">
+        <section className="container-max py-8">
+          <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
+            <div className="relative w-full aspect-[1024/486] overflow-hidden">
               <Image
                 src="/images/eds-case-study-5.png"
                 alt="One-click light and dark mode swap display"

@@ -55,7 +55,7 @@ export const projects = [
     tags: ["Product Design", "Product Strategy"],
     year: "2025",
     image: "/images/project-smat.png",
-    href: "https://renjujoseph.framer.website/projects/smat-social-sync-platform",
+    href: "/projects/smat-social-sync-platform",
   },
   {
     title: "PeerShare: Resource Ecosystem",
@@ -63,7 +63,7 @@ export const projects = [
     tags: ["Product Design", "User Research"],
     year: "2024",
     image: "/images/project-peershare.png",
-    href: "https://renjujoseph.framer.website/projects/campus-resource-sharing-app",
+    href: "/projects/campus-resource-sharing-app",
   },
   {
     title: "RevenueHero: Landing Page",
@@ -71,7 +71,7 @@ export const projects = [
     tags: ["Growth & CRO"],
     year: "2024",
     image: "/images/project-revenuehero.png",
-    href: "https://renjujoseph.framer.website/projects/revenuehero-landing-page-optimization",
+    href: "/projects/revenuehero-landing-page-optimization",
   },
 ];
 

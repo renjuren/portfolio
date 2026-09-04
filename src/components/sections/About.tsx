@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import SectionLabel from "@/components/ui/SectionLabel";
 import ScrollReveal from "@/components/ui/ScrollReveal";
 import PillButton from "@/components/ui/PillButton";
@@ -9,55 +10,36 @@ export default function About() {
   return (
     <section id="about" className="section-padding">
       <div className="container-max">
-        <SectionLabel number="01" title="About Me" />
+        {/* Part 1: Portrait + text side by side */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">
+          {/* Left column: Portrait photo at its natural aspect ratio, no overlays */}
+          <ScrollReveal>
+            <div className="relative w-full overflow-hidden rounded-sm">
+              <Image
+                src="/images/profile.jpg"
+                alt="Renju Joseph, Senior Product Designer"
+                width={1160}
+                height={1404}
+                priority
+                className="w-full h-auto object-cover rounded-sm"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+              />
+            </div>
+          </ScrollReveal>
 
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
-          {/* Left side - Images (asymmetric overlapping) */}
-          <div className="lg:col-span-7 relative">
-            <ScrollReveal>
-              <div className="relative">
-                {/* Main image - Profile photo */}
-                <div className="relative aspect-[4/5] w-full max-w-lg overflow-hidden rounded-sm">
-                  <Image
-                    src="/images/profile.jpg"
-                    alt="Renju Joseph, Senior Product Designer"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 1024px) 100vw, 60vw"
-                  />
-                </div>
+          {/* Right column: Section label, heading, body paragraphs, and button */}
+          <div>
+            <SectionLabel number="01" title="About Me" />
 
-                {/* Overlapping smaller image - project work */}
-                <ScrollReveal
-                  delay={0.3}
-                  direction="right"
-                  className="hidden md:block absolute -bottom-12 -right-8 lg:right-0 xl:-right-8"
-                >
-                  <div className="relative w-64 lg:w-72 aspect-[3/4] overflow-hidden rounded-sm shadow-2xl">
-                    <Image
-                      src="/images/project-eds.png"
-                      alt="Enterprise Design System, featured project"
-                      fill
-                      className="object-cover"
-                      sizes="300px"
-                    />
-                  </div>
-                </ScrollReveal>
-              </div>
-            </ScrollReveal>
-          </div>
-
-          {/* Right side - Text */}
-          <div className="lg:col-span-5 lg:pt-16 xl:pt-24">
-            <ScrollReveal delay={0.2}>
+            <ScrollReveal delay={0.1}>
               <h2 className="text-heading mb-6">
                 Building Scalable Systems
-                <br />
+                <br className="hidden sm:inline" />
                 for Complex Platforms
               </h2>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.3}>
+            <ScrollReveal delay={0.2}>
               <p className="text-body mb-4">
                 I build scalable systems for complex enterprise platforms. I
                 bridge the gap between complex engineering constraints and
@@ -65,21 +47,40 @@ export default function About() {
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.4}>
+            <ScrollReveal delay={0.3}>
               <p className="text-body mb-8">
-                With a background in motion and photography, I build
-                high-fidelity prototypes that don&apos;t just look good, they
-                validate business hypotheses and reduce development friction.
+                I work at the intersection of design systems and AI tooling. My
+                recent rebuild of IDP Education&apos;s global design system reduced
+                1,519 component variants to 112 and connected the system to code
+                via MCP, the first AI-readable design system at IDP.
               </p>
             </ScrollReveal>
 
-            <ScrollReveal delay={0.5}>
+            <ScrollReveal delay={0.4}>
               <PillButton href="#expertise" variant="dark">
                 Get to Know Me
               </PillButton>
             </ScrollReveal>
           </div>
         </div>
+
+        {/* Part 2: Case study thumbnail at full width */}
+        <ScrollReveal delay={0.2} className="mt-16 md:mt-20 lg:mt-24">
+          <Link
+            href="/projects/idp-design-system-2026"
+            className="group block relative w-full overflow-hidden rounded-sm shadow-md hover:shadow-2xl transition-all duration-500 ease-out hover:-translate-y-1"
+            aria-label="View IDP Education Design System Case Study"
+          >
+            <Image
+              src="/images/project-eds.png"
+              alt="Enterprise Design System, cutting variants from 1,519 to 112"
+              width={2400}
+              height={1800}
+              className="w-full h-auto object-cover transition-transform duration-700 ease-out group-hover:scale-[1.01]"
+              sizes="(max-width: 1440px) 100vw, 1440px"
+            />
+          </Link>
+        </ScrollReveal>
       </div>
     </section>
   );

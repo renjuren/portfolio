@@ -1,51 +1,34 @@
-"use client";
-
-import { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-import AnimatedText from "@/components/ui/AnimatedText";
-import PillButton from "@/components/ui/PillButton";
-
 export default function BottomCTA() {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1.15, 1]);
-
   return (
-    <section ref={containerRef} className="relative overflow-hidden">
-      {/* Background Image with Parallax */}
-      <motion.div className="absolute inset-0" style={{ scale: imageScale }}>
-        <Image
-          src="/images/cta-bg.png"
-          alt="Dramatic modern architectural atrium"
-          fill
-          className="object-cover"
-          sizes="100vw"
-        />
-        {/* Dark Overlay */}
-        <div className="absolute inset-0 bg-black/60" />
-      </motion.div>
+    <section className="section-padding bg-bg-light">
+      <div className="container-max">
+        <div className="max-w-[800px]">
+          {/* Small section label */}
+          <div className="text-[13px] uppercase tracking-[0.1em] text-text-muted font-medium mb-8">
+            [04] · WORK WITH ME
+          </div>
 
-      {/* Content */}
-      <div className="relative container-max py-32 md:py-40 lg:py-52 text-center text-text-light">
-        <h2 className="text-display-sm md:text-display mb-8">
-          <AnimatedText text="Ready to Build Something Impactful" />
-        </h2>
+          {/* Primary statement */}
+          <h2 className="text-[32px] md:text-[44px] text-text-primary font-normal leading-[1.15] tracking-tight mb-8">
+            Looking for enterprise SaaS teams where design decisions carry weight
+            and design systems are treated as products.
+          </h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.6, duration: 0.6 }}
-        >
-          <PillButton href="#contact" variant="light">
-            Let&apos;s Connect
-          </PillButton>
-        </motion.div>
+          {/* Sub-statement */}
+          <p className="text-[18px] md:text-[20px] text-text-secondary leading-[1.5] mb-8">
+            If that sounds like your team, I&apos;d like to hear from you.
+          </p>
+
+          {/* Contact line */}
+          <div>
+            <a
+              href="mailto:renjujoseph6@outlook.com"
+              className="text-[17px] text-text-primary hover:underline underline-offset-4"
+            >
+              renjujoseph6@outlook.com
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );

@@ -10,7 +10,7 @@ export default function SMATCaseStudy() {
   return (
     <>
       <Header />
-      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
+      <main className="bg-black min-h-screen text-text-secondary overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
         <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">

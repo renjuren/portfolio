@@ -11,9 +11,9 @@ export const navLinks = {
 
 export const statistics = [
   { value: 6, suffix: "+", label: "Years Experience" },
-  { value: 12, suffix: "+", label: "Designers Aligned (across the IDP design system)" },
-  { value: 50, suffix: "+", label: "Engineers Adopting (the IDP design system)" },
-  { value: 4, suffix: "", label: "Cities (Chennai, London, Melbourne, Taipei)" },
+  { value: 12, suffix: "+", label: "Designers Aligned" },
+  { value: 50, suffix: "+", label: "Engineers Adopting" },
+  { value: 4, suffix: "", label: "Cities" },
 ];
 
 export const projects = [
@@ -103,34 +103,6 @@ export const expertiseItems = [
       "Design Systems Architecture",
       "High-Fidelity Prototyping",
       "Responsive & Adaptive Design",
-    ],
-  },
-  {
-    id: "product-strategy",
-    title: "Product Strategy",
-    image: "/images/project-smat.png",
-    description:
-      "I bridge the gap between complex engineering constraints and intuitive user needs, aligning business goals, user research, and technical feasibility into a cohesive product vision.",
-    services: [
-      "Product Discovery & Definition",
-      "User Research & Persona Development",
-      "Information Architecture",
-      "Competitive Analysis",
-      "Feature Prioritization & Roadmapping",
-    ],
-  },
-  {
-    id: "motion-prototyping",
-    title: "Motion & Prototyping",
-    image: "/images/project-revenuehero.png",
-    description:
-      "With a background in motion and photography, I build high-fidelity prototypes that don't just look good, they validate business hypotheses and reduce development friction.",
-    services: [
-      "Motion Design for UI",
-      "Rapid Prototyping",
-      "Micro-Interaction Design",
-      "Animation & Transitions",
-      "Interactive Demos & Walkthroughs",
     ],
   },
 ];

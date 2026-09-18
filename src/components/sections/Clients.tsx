@@ -23,7 +23,7 @@ const doubledServices = [...services, ...services];
 
 export default function Clients() {
   return (
-    <section className="py-20 md:py-28 relative z-10 overflow-hidden">
+    <section className="py-20 md:py-28 lg:py-32 relative z-10 overflow-hidden">
       <div className="container-max mb-12">
         <ScrollReveal>
           <p className="text-label text-center">Skills & Capabilities</p>

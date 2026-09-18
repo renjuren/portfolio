@@ -6,7 +6,7 @@ import PillButton from "@/components/ui/PillButton";
 
 export default function BottomCTA() {
   return (
-    <section className="min-h-screen flex items-center justify-center relative z-10 py-20">
+    <section className="min-h-screen flex items-center justify-center relative z-10 py-20 md:py-28 lg:py-32">
       <div className="container-max text-center max-w-4xl mx-auto">
         {/* Section label */}
         <motion.div

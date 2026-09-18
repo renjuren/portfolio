@@ -294,3 +294,18 @@ body {
     display: none;
   }
 }
+
+/* === Hide mobile menu controls and Next.js dev overlays on desktop viewports === */
+@media (min-width: 768px) {
+  #mobile-menu-toggle,
+  button[aria-label="Toggle navigation menu"],
+  .mobile-only {
+    display: none !important;
+  }
+}
+
+nextjs-portal,
+[data-nextjs-toast],
+[data-nextjs-dialog-overlay] {
+  display: none !important;
+}

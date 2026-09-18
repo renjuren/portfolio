@@ -70,6 +70,7 @@ export default function Header() {
 
           {/* Mobile Menu Toggle */}
           <button
+            id="mobile-menu-toggle"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden flex flex-col gap-1.5 p-2"
             aria-label="Toggle navigation menu"

@@ -22,7 +22,6 @@ export default function Home() {
         <SectionTransition text="Crafting systems that scale" />
         <About />
         <Statistics />
-        <SectionTransition text="Selected work" />
         <Projects />
         <Clients />
         <SectionTransition text="Deep expertise" />

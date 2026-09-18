@@ -27,9 +27,19 @@ export default function ProjectsArchive() {
     setMousePosition({ x: e.clientX, y: e.clientY });
   };
 
+  const visibleHrefs = [
+    "/projects/idp-design-system-2026",
+    "/projects/idp-partner-portal-rbac",
+    "/projects/revenuehero-landing-page-optimization",
+  ];
+
+  const availableProjects = projects.filter((project) =>
+    visibleHrefs.includes(project.href)
+  );
+
   const filteredProjects = selectedCategory === "All"
-    ? projects
-    : projects.filter((project) => project.tags.includes(selectedCategory));
+    ? availableProjects
+    : availableProjects.filter((project) => project.tags.includes(selectedCategory));
 
   return (
     <>

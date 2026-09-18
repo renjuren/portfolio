@@ -115,39 +115,26 @@ function ProjectCard({
         }}
       >
         <Link href={project.href} className="block group">
-          <motion.div
-            className={`relative ${layout.height} overflow-hidden rounded-2xl glass-card cursor-pointer`}
-            whileHover={{
-              y: -8,
-              scale: 1.03,
-              borderColor: "rgba(255, 255, 255, 0.15)",
-            }}
-            transition={{ duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
-          >
+          <div className={`relative ${layout.height} w-full overflow-hidden rounded-2xl glass-card`}>
             <Image
               src={project.image}
               alt={project.title}
               fill
-              className="object-cover transition-transform duration-700 group-hover:scale-105"
+              className="object-cover"
               sizes="(max-width: 768px) 80vw, 420px"
             />
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-300" />
-            {/* Content */}
-            <div className="absolute bottom-0 left-0 right-0 p-5">
-              <span className="text-[11px] uppercase tracking-[0.12em] text-text-muted font-medium block mb-1.5">
-                {project.category}
-              </span>
-              <h3 className="text-lg md:text-xl font-semibold text-white leading-tight">
-                {project.title}
-              </h3>
-              <span className="text-xs text-text-muted mt-1 block">
-                {project.year}
-              </span>
-            </div>
-            {/* Hover glow */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none shadow-[0_0_40px_rgba(232,130,12,0.15)]" />
-          </motion.div>
+          </div>
+          <div className="mt-4 flex flex-col gap-1 text-left">
+            <span className="text-xs uppercase tracking-[0.12em] text-text-muted font-medium">
+              {project.category}
+            </span>
+            <h3 className="text-lg md:text-xl font-bold text-white leading-tight">
+              {project.title}
+            </h3>
+            <span className="text-xs text-text-muted">
+              {project.year}
+            </span>
+          </div>
         </Link>
       </motion.div>
     </motion.div>
@@ -155,17 +142,24 @@ function ProjectCard({
 }
 
 export default function Projects() {
+  // Visible projects on homepage: Enterprise Design System, Access Management (RBAC), RevenueHero Landing Page
+  const allowedHrefs = [
+    "/projects/idp-design-system-2026",
+    "/projects/idp-partner-portal-rbac",
+    "/projects/revenuehero-landing-page-optimization",
+  ];
+
   const visibleProjects = projects.filter((project) =>
-    project.href.startsWith("/projects")
+    allowedHrefs.includes(project.href)
   );
 
   return (
-    <section id="projects" className="section-padding relative z-10">
+    <section id="projects" className="pt-0 pb-20 md:pb-28 lg:pb-32 relative z-10">
       <div className="container-max">
         <SectionLabel number="02" title="Selected Work" />
 
         {/* Scattered layout — desktop */}
-        <div className="mt-16 hidden md:flex flex-wrap justify-between gap-y-12">
+        <div className="mt-8 hidden md:flex flex-wrap justify-between gap-y-12">
           {visibleProjects.map((project, index) => (
             <ProjectCard
               key={project.title}
@@ -177,7 +171,7 @@ export default function Projects() {
         </div>
 
         {/* Mobile: single column stack */}
-        <div className="mt-12 flex flex-col gap-8 md:hidden">
+        <div className="mt-6 flex flex-col gap-8 md:hidden">
           {visibleProjects.map((project, index) => (
             <motion.div
               key={project.title}
@@ -191,7 +185,7 @@ export default function Projects() {
               }}
             >
               <Link href={project.href} className="block group">
-                <div className="relative h-[240px] overflow-hidden rounded-2xl glass-card">
+                <div className="relative h-[240px] w-full overflow-hidden rounded-2xl glass-card">
                   <Image
                     src={project.image}
                     alt={project.title}
@@ -199,50 +193,32 @@ export default function Projects() {
                     className="object-cover"
                     sizes="100vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-0 left-0 right-0 p-5">
-                    <span className="text-[11px] uppercase tracking-[0.12em] text-text-muted font-medium block mb-1.5">
-                      {project.category}
-                    </span>
-                    <h3 className="text-lg font-semibold text-white leading-tight">
-                      {project.title}
-                    </h3>
-                    <span className="text-xs text-text-muted mt-1 block">
-                      {project.year}
-                    </span>
-                  </div>
+                </div>
+                <div className="mt-4 flex flex-col gap-1 text-left">
+                  <span className="text-xs uppercase tracking-[0.12em] text-text-muted font-medium">
+                    {project.category}
+                  </span>
+                  <h3 className="text-lg font-bold text-white leading-tight">
+                    {project.title}
+                  </h3>
+                  <span className="text-xs text-text-muted">
+                    {project.year}
+                  </span>
                 </div>
               </Link>
             </motion.div>
           ))}
         </div>
 
-        {/* Rotating monogram */}
-        <div className="flex justify-center my-16 md:my-24">
-          <div className="relative w-32 h-32 md:w-40 md:h-40">
-            {/* Dotted orbit */}
-            <div
-              className="absolute inset-0 rounded-full border border-dashed border-white/10"
-              style={{ animation: "spin-slow 30s linear infinite" }}
-            />
-            {/* Monogram */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <span className="text-2xl md:text-3xl font-bold text-white/20 tracking-widest">
-                RJ
-              </span>
-            </div>
-          </div>
-        </div>
-
         {/* Note and button */}
         <motion.p
-          className="text-sm text-text-muted font-light italic text-center"
+          className="mt-16 text-sm text-text-muted font-light italic text-center"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.2, duration: 0.6 }}
         >
-          More case studies in progress.
+          More case studies coming soon.
         </motion.p>
 
         <motion.div

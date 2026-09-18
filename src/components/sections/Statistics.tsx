@@ -13,42 +13,75 @@ function AnimatedCounter({
   suffix: string;
   inView: boolean;
 }) {
-  const [count, setCount] = useState(0);
+  // Initial state is the full target value for SSR, SEO, ATS parsers, and scrapers
+  const [count, setCount] = useState<number>(value);
+  const [hasAnimated, setHasAnimated] = useState(false);
 
   useEffect(() => {
-    if (!inView) return;
+    // Respect reduced motion
+    const prefersReducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
 
-    let start = 0;
-    const duration = 2000;
-    const increment = value / (duration / 16);
+    if (prefersReducedMotion) {
+      setCount(value);
+      return;
+    }
 
-    const timer = setInterval(() => {
-      start += increment;
-      if (start >= value) {
-        setCount(value);
-        clearInterval(timer);
+    if (!inView || hasAnimated) return;
+
+    let startTimestamp: number | null = null;
+    const duration = 1600; // ms
+    let animationFrameId: number;
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      // Ease out cubic
+      const easeOut = 1 - Math.pow(1 - progress, 3);
+      const current = Math.round(value * easeOut);
+
+      setCount(current);
+
+      if (progress < 1) {
+        animationFrameId = requestAnimationFrame(step);
       } else {
-        setCount(Math.floor(start));
+        setCount(value);
+        setHasAnimated(true);
       }
-    }, 16);
+    };
 
-    return () => clearInterval(timer);
-  }, [inView, value]);
+    // Begin count-up animation
+    setCount(0);
+    animationFrameId = requestAnimationFrame(step);
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+      }
+    };
+  }, [inView, value, hasAnimated]);
 
   return (
-    <span>
-      {count}
-      {suffix}
-    </span>
+    <>
+      <span className="sr-only">
+        {value}
+        {suffix}
+      </span>
+      <span aria-hidden="true">
+        {count}
+        {suffix}
+      </span>
+    </>
   );
 }
 
 export default function Statistics() {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section className="section-padding relative z-10">
+    <section className="pt-6 md:pt-8 pb-20 md:pb-28 lg:pb-32 relative z-10">
       <div className="container-max" ref={ref}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           {statistics.map((stat, index) => (

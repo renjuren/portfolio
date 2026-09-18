@@ -14,7 +14,7 @@ export default function SectionTransition({
   const words = text.split(" ");
 
   return (
-    <div className={`py-32 md:py-44 lg:py-56 relative z-10 ${className}`}>
+    <div className={`py-20 md:py-28 lg:py-32 relative z-10 ${className}`}>
       <div className="container-max">
         <motion.h2
           className="text-[clamp(2.5rem,6vw,4.5rem)] font-bold tracking-[-0.03em] leading-[1.1] text-white max-w-4xl"

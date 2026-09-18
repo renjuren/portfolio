@@ -10,7 +10,7 @@ export default function BindrAICaseStudy() {
   return (
     <>
       <Header />
-      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
+      <main className="bg-black min-h-screen text-text-secondary overflow-x-clip">
         
         {/* 1. HERO (Dark Background Section) */}
         <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
@@ -234,7 +234,7 @@ export default function BindrAICaseStudy() {
                     <button className="bg-[#F14C52] text-white text-xs font-bold px-6 py-3 rounded-full cursor-default">
                       Primary Coral
                     </button>
-                    <button className="bg-[#F0F0F0] text-[#18191F] text-xs font-bold px-6 py-3 rounded-full cursor-default">
+                    <button className="bg-[#F0F0F0] text-text-secondary text-xs font-bold px-6 py-3 rounded-full cursor-default">
                       Secondary Gray
                     </button>
                     <button className="border border-[#F14C52] text-[#F14C52] text-xs font-bold px-6 py-3 rounded-full cursor-default inline-flex items-center gap-2">

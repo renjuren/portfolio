@@ -8,7 +8,7 @@ import PillButton from "@/components/ui/PillButton";
 
 export default function About() {
   return (
-    <section id="about" className="section-padding relative z-10">
+    <section id="about" className="pt-6 md:pt-8 pb-10 md:pb-14 relative z-10">
       <div className="container-max">
         {/* Part 1: Portrait + text side by side */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 xl:gap-20 items-center">

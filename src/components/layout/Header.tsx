@@ -5,17 +5,13 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { navLinks } from "@/lib/data";
 
-interface HeaderProps {
-  lightOnTransparent?: boolean;
-}
-
-export default function Header({ lightOnTransparent = false }: HeaderProps) {
+export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50);
+      setIsScrolled(window.scrollY > 60);
     };
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
@@ -32,88 +28,68 @@ export default function Header({ lightOnTransparent = false }: HeaderProps) {
     };
   }, [isMobileMenuOpen]);
 
-  const isLightText = lightOnTransparent && !isScrolled;
-
-  const textPrimaryClass = isLightText
-    ? "text-text-light hover:text-white"
-    : "text-text-primary hover:text-text-secondary";
-
-  const textSecondaryClass = isLightText
-    ? "text-text-light/80 hover:text-white"
-    : "text-text-secondary hover:text-text-primary";
-
-  const hamburgerLineClass = (isLightText && !isMobileMenuOpen)
-    ? "bg-text-light"
-    : "bg-text-primary";
-
   return (
     <>
       <motion.header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? "bg-bg-light/90 backdrop-blur-md border-b border-border-light"
-            : "bg-transparent"
-        }`}
-        initial={{ y: -100 }}
-        animate={{ y: 0 }}
+        className={`fixed top-5 left-1/2 -translate-x-1/2 w-[92%] max-w-5xl z-50 rounded-2xl transition-all duration-500 glass-nav ${
+          isScrolled ? "glass-nav-scrolled" : ""
+        } ${isScrolled ? "py-2.5 px-6" : "py-4 px-8"}`}
+        initial={{ y: -100, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
       >
-        <nav className="container-max flex items-center justify-between h-20 md:h-24">
-          {/* Left Links */}
+        <nav className="flex items-center justify-between">
+          {/* Left: Logo */}
+          <Link
+            href="/"
+            className="text-lg font-semibold tracking-tight text-white"
+          >
+            RENJU JOSEPH.
+          </Link>
+
+          {/* Center: Nav Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.left.map((link) => (
               <Link
                 key={link.label}
                 href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 ${textPrimaryClass}`}
+                className="text-sm text-[#94A3B8] hover:text-white transition-colors duration-300"
               >
                 {link.label}
               </Link>
             ))}
           </div>
 
-          {/* Center Links */}
-          <div className="hidden md:flex items-center gap-8">
-            {navLinks.center.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className={`text-sm font-medium transition-colors duration-300 ${textSecondaryClass}`}
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div>
-
-          {/* Logo - Right */}
-          <Link
-            href="/"
-            className={`text-lg md:text-xl font-semibold tracking-tight transition-colors duration-300 ${isLightText ? "text-text-light hover:text-white" : "text-text-primary hover:text-text-secondary"}`}
+          {/* Right: CTA Button */}
+          <a
+            href="mailto:renjujoseph6@outlook.com"
+            className="hidden md:inline-flex btn-gradient-orange rounded-full px-5 py-2 text-sm font-medium text-white"
           >
-            RENJU JOSEPH.
-          </Link>
+            Get in Touch
+          </a>
 
           {/* Mobile Menu Toggle */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden flex flex-col gap-1.5 p-2"
             aria-label="Toggle navigation menu"
-            id="mobile-menu-toggle"
           >
             <motion.span
-              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
+              className="w-5 h-0.5 bg-white block"
               animate={
-                isMobileMenuOpen ? { rotate: 45, y: 8 } : { rotate: 0, y: 0 }
+                isMobileMenuOpen
+                  ? { rotate: 45, y: 8 }
+                  : { rotate: 0, y: 0 }
               }
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
+              className="w-5 h-0.5 bg-white block"
               animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
               transition={{ duration: 0.3 }}
             />
             <motion.span
-              className={`w-6 h-0.5 block ${hamburgerLineClass}`}
+              className="w-5 h-0.5 bg-white block"
               animate={
                 isMobileMenuOpen
                   ? { rotate: -45, y: -8 }
@@ -129,10 +105,10 @@ export default function Header({ lightOnTransparent = false }: HeaderProps) {
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
-            className="fixed inset-0 z-40 bg-bg-light flex flex-col items-center justify-center gap-8"
-            initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -20 }}
+            className="fixed inset-0 z-40 bg-black flex flex-col items-center justify-center gap-8"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.25, 0.1, 0.25, 1] }}
           >
             {[...navLinks.left, ...navLinks.center].map((link, i) => (
@@ -144,7 +120,7 @@ export default function Header({ lightOnTransparent = false }: HeaderProps) {
               >
                 <Link
                   href={link.href}
-                  className="text-3xl font-light text-text-primary hover:text-text-secondary transition-colors duration-300"
+                  className="text-3xl font-light text-white hover:text-white/70 transition-colors duration-300"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}

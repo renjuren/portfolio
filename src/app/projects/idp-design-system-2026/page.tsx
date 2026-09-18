@@ -11,10 +11,10 @@ import AnimatedText from "@/components/ui/AnimatedText";
 export default function DesignSystemCaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4">
@@ -26,12 +26,12 @@ export default function DesignSystemCaseStudy() {
               Enterprise Design System 2026
             </h1>
             
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               A ground-up rebuild of IDP's global design system. 1,519 component variants reduced to 112, MCP-connected to code, serving 50+ engineers across four cities.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1">Client</span>
                 <span className="text-base font-medium text-white">IDP Education</span>
@@ -63,7 +63,7 @@ export default function DesignSystemCaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -95,7 +95,7 @@ export default function DesignSystemCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] Context
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Where this started
               </h2>
             </div>
@@ -122,13 +122,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 4. THE PROBLEM section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] Analysis
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Five failures, compounding
               </h2>
               <p className="text-sm text-text-secondary mt-4 max-w-sm">
@@ -141,8 +141,8 @@ export default function DesignSystemCaseStudy() {
                 
                 {/* Failure 1 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">01</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">01</span>
                     <span>Variant sprawl that had become unmaintainable</span>
                   </h3>
                   <p>
@@ -152,8 +152,8 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 2 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">02</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">02</span>
                     <span>A flat color palette masquerading as a token system</span>
                   </h3>
                   <p>
@@ -163,8 +163,8 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 3 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">03</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">03</span>
                     <span>WCAG failures across the palette</span>
                   </h3>
                   <p>
@@ -174,8 +174,8 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 4 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">04</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">04</span>
                     <span>A growing gap between design and engineering</span>
                   </h3>
                   <p>
@@ -185,8 +185,8 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Failure 5 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">05</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">05</span>
                     <span>Cross-geography divergence</span>
                   </h3>
                   <p>
@@ -194,7 +194,7 @@ export default function DesignSystemCaseStudy() {
                   </p>
                 </div>
 
-                <div className="pt-6 border-t border-border-light text-text-secondary italic">
+                <div className="pt-6 border-t border-border-default text-text-secondary italic">
                   The Head of UX raised the inconsistency concern. I'd been tracking the failures for months. I took the initiative, mapped the gaps end-to-end, and proposed a full rebuild.
                 </div>
               </div>
@@ -217,13 +217,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 6. WHY THIS WAS HARD section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] Constraints
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Why this was hard
               </h2>
               <p className="text-sm text-text-secondary mt-4 max-w-sm">
@@ -236,7 +236,7 @@ export default function DesignSystemCaseStudy() {
                 
                 {/* Reason 1 */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">1. Cross-geography buy-in</h4>
+                  <h4 className="font-medium text-white">1. Cross-geography buy-in</h4>
                   <p>
                     12 designers in four cities, each with their own working habits and (in some cases) their own ad-hoc component libraries built to work around the shared system. A new system without their buy-in would simply become a sixth ad-hoc library in the org.
                   </p>
@@ -244,7 +244,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Reason 2 */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">2. Cross-domain governance</h4>
+                  <h4 className="font-medium text-white">2. Cross-domain governance</h4>
                   <p>
                     The Partner Portal and Student Portal serve fundamentally different audiences (B2B partners vs. B2C students). The Student Portal team initially argued for visual differentiation through color, which was a reasonable instinct, but in practice, it had produced fragmentation rather than differentiation. The case for a unified system had to be made on technical and accessibility grounds, not just visual ones.
                   </p>
@@ -252,7 +252,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Reason 3 */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">3. No mandate to break things</h4>
+                  <h4 className="font-medium text-white">3. No mandate to break things</h4>
                   <p>
                     Leadership approved the rebuild but didn't authorize a hard cutover. Existing products were mid-sprint, integrated with each other, and couldn't absorb a forced migration. The new system had to coexist with the old one and earn adoption product by product.
                   </p>
@@ -260,7 +260,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Reason 4 */}
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">4. An AI-readiness target with no internal precedent</h4>
+                  <h4 className="font-medium text-white">4. An AI-readiness target with no internal precedent</h4>
                   <p>
                     No one had built a design system at IDP that was AI-tool-compatible, MCP-connected, or designed to stay in sync with code repositories. I researched how Atlassian, IBM, and Microsoft structured theirs and worked out my own architecture from that base.
                   </p>
@@ -272,27 +272,27 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 7. THE APPROACH section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] Strategy
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 The approach
               </h2>
             </div>
             
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-8">
-                <p className="text-body-lg font-light text-text-primary">
+                <p className="text-body-lg font-light text-white">
                   I structured the work in four sequential layers, starting from extensive research up to AI integration pipelines.
                 </p>
 
                 <div className="space-y-6 mt-8">
                   {/* Layer 1 */}
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary font-mono">
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-white font-mono">
                       Layer 1: Research & Alignment
                     </h4>
                     <p>
@@ -302,7 +302,7 @@ export default function DesignSystemCaseStudy() {
 
                   {/* Layer 2 */}
                   <div className="space-y-2">
-                    <h4 className="text-sm font-semibold uppercase tracking-wider text-text-primary font-mono">
+                    <h4 className="text-sm font-semibold uppercase tracking-wider text-white font-mono">
                       Layer 2: Token Architecture
                     </h4>
                     <p>
@@ -340,7 +340,7 @@ export default function DesignSystemCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] Architecture
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Layer 3: Components
               </h2>
             </div>
@@ -373,13 +373,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 11. AI AND CODE INTEGRATION section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [06] Tooling
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Layer 4: AI & Code Integration
               </h2>
             </div>
@@ -400,20 +400,20 @@ export default function DesignSystemCaseStudy() {
         {/* 12. IMAGE — MCP architecture visual (image 06 - Custom CSS Diagram) */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1}>
-            <div className="bg-[#FAF9F5] border border-border-light rounded-lg p-8 md:p-12 shadow-lg">
+            <div className="bg-[#FAF9F5] border border-border-default rounded-lg p-8 md:p-12 shadow-lg">
               <div className="mb-8">
                 <span className="text-xs uppercase tracking-widest text-text-secondary font-mono">INTEGRATION PIPELINE</span>
-                <h4 className="text-lg font-medium text-text-primary mt-1">Model Context Protocol Sync Schematic</h4>
+                <h4 className="text-lg font-medium text-white mt-1">Model Context Protocol Sync Schematic</h4>
               </div>
 
               {/* Node Schematic Workflow */}
               <div className="grid grid-cols-1 md:grid-cols-5 gap-4 relative">
                 {/* Figma Node */}
-                <div className="bg-white p-5 border border-border-light rounded flex flex-col items-center text-center z-10 shadow-sm">
+                <div className="bg-white p-5 border border-border-default rounded flex flex-col items-center text-center z-10 shadow-sm">
                   <div className="w-10 h-10 bg-[#FF7262]/10 text-[#FF7262] rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5c0-.83.67-1.5 1.5-1.5h1.75c.83 0 1.5.67 1.5 1.5s-.67 1.5-1.5 1.5H14.5c-.83 0-1.5-.67-1.5-1.5zM7.5 11c-.83 0-1.5-.67-1.5-1.5V7.75C6 6.92 6.67 6.25 7.5 6.25S9 6.92 9 7.75v1.75c0 .83-.67 1.5-1.5 1.5zm7 0c-.83 0-1.5-.67-1.5-1.5V7.75c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5v1.75c0 .83-.67 1.5-1.5 1.5z" /></svg>
                   </div>
-                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Figma Make Kit</h5>
+                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-white">Figma Make Kit</h5>
                   <p className="text-[10px] text-text-secondary mt-1">Design tokens, system primitives, & Figma Make Kit</p>
                 </div>
 
@@ -423,7 +423,7 @@ export default function DesignSystemCaseStudy() {
                 </div>
 
                 {/* MCP Connector Node */}
-                <div className="bg-bg-dark text-text-light p-5 rounded flex flex-col items-center text-center z-10 shadow-md border border-border-dark">
+                <div className="bg-black text-white p-5 rounded flex flex-col items-center text-center z-10 shadow-md border border-border-default">
                   <div className="w-10 h-10 bg-white/10 text-white rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25m18 0A2.25 2.25 0 0018.75 3H5.25A2.25 2.25 0 003 5.25m18 0V12a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 12V5.25" /></svg>
                   </div>
@@ -437,18 +437,18 @@ export default function DesignSystemCaseStudy() {
                 </div>
 
                 {/* Code Repo Node */}
-                <div className="bg-white p-5 border border-border-light rounded flex flex-col items-center text-center z-10 shadow-sm">
+                <div className="bg-white p-5 border border-border-default rounded flex flex-col items-center text-center z-10 shadow-sm">
                   <div className="w-10 h-10 bg-green-500/10 text-green-600 rounded-full flex items-center justify-center mb-3">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3l-4.5 16.5" /></svg>
                   </div>
-                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-text-primary">Agentic Code</h5>
+                  <h5 className="text-xs font-mono font-bold tracking-wider uppercase text-white">Agentic Code</h5>
                   <p className="text-[10px] text-text-secondary mt-1">AI agents generate React & Angular screens directly in Git</p>
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-border-light flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
+              <div className="mt-8 pt-6 border-t border-border-default flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
                 <div className="text-xs text-text-secondary">
-                  <strong className="text-text-primary">Agentic Pipeline:</strong> Component contracts and Make Kit updates feed AI agents, generating production screens in real-time.
+                  <strong className="text-white">Agentic Pipeline:</strong> Component contracts and Make Kit updates feed AI agents, generating production screens in real-time.
                 </div>
                 <span className="text-[10px] uppercase font-mono bg-green-100 text-green-800 px-3 py-1 rounded">Active Connection</span>
               </div>
@@ -457,13 +457,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 11. THE HARDEST DECISION section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [07] Trade-offs
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 The hardest decision
               </h2>
             </div>
@@ -508,13 +508,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 13. OUTCOMES section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [08] Impact
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 What changed
               </h2>
             </div>
@@ -524,7 +524,7 @@ export default function DesignSystemCaseStudy() {
                 
                 {/* Metric 1 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Adoption</h4>
+                  <h4 className="font-semibold text-white">Adoption</h4>
                   <p className="text-sm">
                     The new system is now used by all 12 designers across Chennai, London, Melbourne, and Taipei, and by 50+ engineers globally consuming the system through the MCP-connected code pipeline.
                   </p>
@@ -532,7 +532,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 2 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Complexity{" "}Reduction</h4>
+                  <h4 className="font-semibold text-white">Complexity{" "}Reduction</h4>
                   <p className="text-sm">
                     Component variants reduced from 1,519 to 112, representing a 92% reduction. The button alone went from 100+ variants to a structured boolean-driven set. Icon swapping moved from name-based variant lookup to true component-swap property.
                   </p>
@@ -540,7 +540,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 3 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Performance{" "}Boost</h4>
+                  <h4 className="font-semibold text-white">Performance{" "}Boost</h4>
                   <p className="text-sm">
                     Complex frames (data tables, dense dashboards) that previously took 40–50 seconds to load now load in under 10 seconds. This is the observed difference on the screens our team builds most often.
                   </p>
@@ -548,7 +548,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 4 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Engineering{" "}Velocity</h4>
+                  <h4 className="font-semibold text-white">Engineering{" "}Velocity</h4>
                   <p className="text-sm">
                     The engineering manager I work most closely with estimated, based on her team's workload tracking, a 30–40% reduction in implementation time, driven by the design-to-code naming alignment and the MCP-propagated component sync.
                   </p>
@@ -556,7 +556,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 5 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Design{" "}Velocity{" "}with{" "}AI</h4>
+                  <h4 className="font-semibold text-white">Design{" "}Velocity{" "}with{" "}AI</h4>
                   <p className="text-sm">
                     Designers using Figma Make and Google Stitch with the new design system as a constraint now generate production-ready output rather than ideation-only output. The team's qualitative estimate is that the design-to-handoff process is 30–50% faster for screens that fit the existing component set.
                   </p>
@@ -564,7 +564,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 6 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Accessibility{" "}Conformance</h4>
+                  <h4 className="font-semibold text-white">Accessibility{" "}Conformance</h4>
                   <p className="text-sm">
                     Semantic tokens are designed to meet WCAG AA contrast standards by default; a subset meet AAA. Designers and AI tools consuming the system now produce accessible-by-default output instead of accessible-by-accident output.
                   </p>
@@ -572,7 +572,7 @@ export default function DesignSystemCaseStudy() {
 
                 {/* Metric 7 */}
                 <div className="space-y-1">
-                  <h4 className="font-semibold text-text-primary">Visual{" "}Consistency</h4>
+                  <h4 className="font-semibold text-white">Visual{" "}Consistency</h4>
                   <p className="text-sm">
                     Visual divergence between Partner Portal and Student Portal, previously a recurring complaint, is no longer a recurring complaint. Designers don't detach components in working files because the slots and variant structure now accommodate the variations they used to detach for.
                   </p>
@@ -586,17 +586,17 @@ export default function DesignSystemCaseStudy() {
         {/* 14. IMAGE — Outcomes metrics visual (image 07 - Custom CSS Metrics Dashboard) */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1}>
-            <div className="bg-white border border-border-light rounded-lg p-6 md:p-12 shadow-lg grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white/5 border border-border-default rounded-lg p-6 md:p-12 shadow-lg grid grid-cols-1 md:grid-cols-3 gap-8">
               
               {/* Stat Block 1 */}
-              <div className="flex flex-col justify-between p-6 bg-bg-light/40 border border-border-light/60 rounded">
+              <div className="flex flex-col justify-between p-6 bg-black/40 border border-border-default/60 rounded">
                 <div>
                   <span className="text-[10px] font-mono tracking-wider text-text-secondary uppercase">COMPLEXITY</span>
-                  <h5 className="text-sm font-medium text-text-primary mt-1">Component Variants</h5>
+                  <h5 className="text-sm font-medium text-white mt-1">Component Variants</h5>
                 </div>
                 <div className="my-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-light text-text-primary">112</span>
+                    <span className="text-5xl font-light text-white">112</span>
                     <span className="text-sm text-text-secondary line-through">1,519</span>
                   </div>
                   <span className="text-xs font-mono font-bold text-green-700 bg-green-100/50 px-2 py-0.5 rounded mt-2 inline-block">-92% reduction</span>
@@ -607,14 +607,14 @@ export default function DesignSystemCaseStudy() {
               </div>
 
               {/* Stat Block 2 */}
-              <div className="flex flex-col justify-between p-6 bg-bg-light/40 border border-border-light/60 rounded">
+              <div className="flex flex-col justify-between p-6 bg-black/40 border border-border-default/60 rounded">
                 <div>
                   <span className="text-[10px] font-mono tracking-wider text-text-secondary uppercase">PERFORMANCE</span>
-                  <h5 className="text-sm font-medium text-text-primary mt-1">Figma Frame Load Time</h5>
+                  <h5 className="text-sm font-medium text-white mt-1">Figma Frame Load Time</h5>
                 </div>
                 <div className="my-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-light text-text-primary">&lt;10s</span>
+                    <span className="text-5xl font-light text-white">&lt;10s</span>
                     <span className="text-sm text-text-secondary line-through">45s</span>
                   </div>
                   <span className="text-xs font-mono font-bold text-green-700 bg-green-100/50 px-2 py-0.5 rounded mt-2 inline-block">80% faster load</span>
@@ -625,14 +625,14 @@ export default function DesignSystemCaseStudy() {
               </div>
 
               {/* Stat Block 3 */}
-              <div className="flex flex-col justify-between p-6 bg-bg-light/40 border border-border-light/60 rounded">
+              <div className="flex flex-col justify-between p-6 bg-black/40 border border-border-default/60 rounded">
                 <div>
                   <span className="text-[10px] font-mono tracking-wider text-text-secondary uppercase">VELOCITY</span>
-                  <h5 className="text-sm font-medium text-text-primary mt-1">Engineering Dev Time</h5>
+                  <h5 className="text-sm font-medium text-white mt-1">Engineering Dev Time</h5>
                 </div>
                 <div className="my-8">
                   <div className="flex items-baseline gap-2">
-                    <span className="text-5xl font-light text-text-primary">-35%</span>
+                    <span className="text-5xl font-light text-white">-35%</span>
                   </div>
                   <span className="text-xs font-mono font-bold text-green-700 bg-green-100/50 px-2 py-0.5 rounded mt-2 inline-block">Workload reduction</span>
                 </div>
@@ -646,13 +646,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 15. WHAT I'D DO DIFFERENTLY section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [09] Retrospective
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 What I'd do differently
               </h2>
             </div>
@@ -677,13 +677,13 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 16. WHAT'S NEXT section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [10] Future
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 What's next
               </h2>
             </div>
@@ -702,7 +702,7 @@ export default function DesignSystemCaseStudy() {
         </section>
 
         {/* 17. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

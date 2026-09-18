@@ -35,13 +35,13 @@ export default function ProjectsArchive() {
     <>
       <Header />
       <main
-        className="bg-bg-light text-text-primary min-h-screen pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden relative"
+        className="bg-black text-white min-h-screen pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden relative"
         onMouseMove={handleMouseMove}
       >
         <div className="container-max">
           {/* Page Header */}
           <div className="max-w-2xl mb-12 md:mb-20">
-            <h1 className="text-display text-text-primary mb-4">
+            <h1 className="text-display text-white mb-4">
               <AnimatedText text="Selected Work." />
             </h1>
             <ScrollReveal delay={0.3}>
@@ -53,7 +53,7 @@ export default function ProjectsArchive() {
 
           {/* Category Filter Tabs */}
           <ScrollReveal delay={0.4} className="mb-12 md:mb-16">
-            <div className="flex flex-wrap gap-2 pb-4 border-b border-border-light">
+            <div className="flex flex-wrap gap-2 pb-4 border-b border-border-default">
               {categories.map((category) => {
                 const isActive = selectedCategory === category;
                 return (
@@ -63,17 +63,17 @@ export default function ProjectsArchive() {
                       setSelectedCategory(category);
                       setHoveredIndex(null); // Reset hover state to avoid wrong references
                     }}
-                    className={`relative px-5 py-2.5 text-sm font-medium transition-colors duration-300 rounded-full cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-text-primary/20 ${
+                    className={`relative px-5 py-2.5 text-sm font-medium transition-colors duration-300 rounded-full cursor-pointer outline-none focus-visible:ring-2 focus-visible:ring-white/20 ${
                       isActive
-                        ? "text-bg-light font-medium"
-                        : "text-text-secondary hover:text-text-primary font-normal"
+                        ? "text-white font-medium"
+                        : "text-text-muted hover:text-white font-normal"
                     }`}
                   >
                     <span className="relative z-10">{category}</span>
                     {isActive && (
                       <motion.div
                         layoutId="active-pill"
-                        className="absolute inset-0 bg-text-primary rounded-full z-0"
+                        className="absolute inset-0 bg-accent-orange rounded-full z-0"
                         transition={{ type: "spring", stiffness: 380, damping: 30 }}
                       />
                     )}
@@ -102,7 +102,7 @@ export default function ProjectsArchive() {
                       opacity: { duration: 0.3 },
                       layout: { type: "spring", stiffness: 300, damping: 30 },
                     }}
-                    className="border-b border-border-light"
+                    className="border-b border-border-default"
                   >
                     <Link
                       href={project.href}
@@ -122,7 +122,7 @@ export default function ProjectsArchive() {
                             {project.year}
                           </span>
                           <h3
-                            className={`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight transition-opacity duration-500 text-text-primary ${
+                            className={`text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-light tracking-tight transition-opacity duration-500 text-white ${
                               isAnyHovered && !isHovered ? "opacity-30" : "opacity-100"
                             }`}
                           >
@@ -149,7 +149,7 @@ export default function ProjectsArchive() {
         <AnimatePresence>
           {hoveredIndex !== null && filteredProjects[hoveredIndex] && (
             <motion.div
-              className="fixed pointer-events-none z-50 w-72 h-48 md:w-96 md:h-64 overflow-hidden rounded-sm shadow-2xl hidden md:block"
+              className="fixed pointer-events-none z-50 w-72 h-48 md:w-96 md:h-64 overflow-hidden rounded-2xl shadow-2xl hidden md:block glass-card p-1"
               style={{
                 left: mousePosition.x + 20,
                 top: mousePosition.y - 100,

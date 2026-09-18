@@ -1,15 +1,33 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
-import { ReactNode } from "react";
 
 interface ScrollRevealProps {
-  children: ReactNode;
+  children: React.ReactNode;
   className?: string;
   delay?: number;
   direction?: "up" | "down" | "left" | "right";
   duration?: number;
   distance?: number;
+}
+
+const EASING: [number, number, number, number] = [0.16, 1, 0.3, 1];
+
+function getDirectionalOffset(
+  direction: "up" | "down" | "left" | "right",
+  distance: number
+): { x: number; y: number } {
+  switch (direction) {
+    case "up":
+      return { x: 0, y: distance };
+    case "down":
+      return { x: 0, y: -distance };
+    case "left":
+      return { x: distance, y: 0 };
+    case "right":
+      return { x: -distance, y: 0 };
+  }
 }
 
 export default function ScrollReveal({
@@ -18,31 +36,17 @@ export default function ScrollReveal({
   delay = 0,
   direction = "up",
   duration = 0.7,
-  distance = 40,
+  distance = 50,
 }: ScrollRevealProps) {
-  const directionMap = {
-    up: { y: distance, x: 0 },
-    down: { y: -distance, x: 0 },
-    left: { x: distance, y: 0 },
-    right: { x: -distance, y: 0 },
-  };
-
-  const initial = {
-    opacity: 0,
-    ...directionMap[direction],
-  };
+  const offset = getDirectionalOffset(direction, distance);
 
   return (
     <motion.div
       className={className}
-      initial={initial}
+      initial={{ opacity: 0, x: offset.x, y: offset.y }}
       whileInView={{ opacity: 1, x: 0, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
-      transition={{
-        duration,
-        delay,
-        ease: [0.25, 0.1, 0.25, 1],
-      }}
+      transition={{ duration, ease: EASING, delay }}
     >
       {children}
     </motion.div>

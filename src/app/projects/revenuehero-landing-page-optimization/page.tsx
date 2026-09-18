@@ -9,10 +9,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export default function RevenueHeroCaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen text-[#18191F] overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
@@ -24,12 +24,12 @@ export default function RevenueHeroCaseStudy() {
               RevenueHero: High-Conversion Landing Page Design
             </h1>
 
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               Overhauling visual hierarchy, competitive positioning, and meeting scheduling pathways to turn high-intent B2B visitors into qualified inbound pipeline.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1 font-mono">Client</span>
                 <span className="text-base font-medium text-white">RevenueHero (B2B SaaS)</span>
@@ -61,7 +61,7 @@ export default function RevenueHeroCaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -74,7 +74,7 @@ export default function RevenueHeroCaseStudy() {
         {/* 2. FEATURED COVER IMAGE */}
         <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16">
           <ScrollReveal delay={0.2} className="w-full max-w-[1024px] mx-auto">
-            <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-xl">
+            <div className="relative w-full aspect-[16/9] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-xl">
               <Image
                 src="/images/project-revenuehero.png"
                 alt="Case Study: RevenueHero Landing Page Redesign"
@@ -94,7 +94,7 @@ export default function RevenueHeroCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] · The Requirement
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Unlocking inbound velocity
               </h2>
             </div>
@@ -115,13 +115,13 @@ export default function RevenueHeroCaseStudy() {
         </section>
 
         {/* 4. WORK PLAN & MARKET ANALYSIS */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] · Strategy
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Direct Competitive Positioning
               </h2>
             </div>
@@ -135,14 +135,14 @@ export default function RevenueHeroCaseStudy() {
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 my-4">
-                  <div className="p-5 bg-white border border-border-light rounded-sm shadow-xs">
+                  <div className="p-5 bg-white/5 border border-border-default rounded-sm shadow-xs">
                     <span className="text-xs font-mono text-[#F14C52] block mb-1">Pain Point 01</span>
-                    <strong className="text-sm block text-text-primary mb-1">Pricing Transparency</strong>
+                    <strong className="text-sm block text-white mb-1">Pricing Transparency</strong>
                     <p className="text-xs text-text-secondary">Eliminated vague "Contact Sales" barriers with an interactive calculator showing predictable flat user licensing.</p>
                   </div>
-                  <div className="p-5 bg-white border border-border-light rounded-sm shadow-xs">
+                  <div className="p-5 bg-white/5 border border-border-default rounded-sm shadow-xs">
                     <span className="text-xs font-mono text-[#F14C52] block mb-1">Pain Point 02</span>
-                    <strong className="text-sm block text-text-primary mb-1">Zero Routing Delay</strong>
+                    <strong className="text-sm block text-white mb-1">Zero Routing Delay</strong>
                     <p className="text-xs text-text-secondary">Highlighted sub-second calendar rendering that lets prospective buyers choose a meeting time on the spot.</p>
                   </div>
                 </div>
@@ -154,8 +154,8 @@ export default function RevenueHeroCaseStudy() {
         {/* 5. HERO COMPARISON IMAGE SECTION */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Competitive Comparison Matrix &amp; Value Proposition</span>
                 <span className="text-xs font-mono text-text-muted">Above-The-Fold Frame</span>
               </div>
@@ -173,13 +173,13 @@ export default function RevenueHeroCaseStudy() {
         </section>
 
         {/* 6. FULL LANDING PAGE ARCHITECTURE */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] · Full-Page Architecture
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 A narrative built to convert
               </h2>
             </div>
@@ -204,8 +204,8 @@ export default function RevenueHeroCaseStudy() {
         {/* 7. FULL LANDING PAGE GRAPHIC IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-8">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-8">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Complete Landing Page Architecture &amp; Content Hierarchy</span>
                 <span className="text-xs font-mono text-text-muted">1440 × 6195 px Full Flow</span>
               </div>
@@ -222,13 +222,13 @@ export default function RevenueHeroCaseStudy() {
         </section>
 
         {/* 8. CRM INTEGRATION & CALENDAR AUTOMATION */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] · Product Showcase
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 CRM Sync &amp; Frictionless Scheduling
               </h2>
             </div>
@@ -249,7 +249,7 @@ export default function RevenueHeroCaseStudy() {
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 flex flex-col justify-between">
+              <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 flex flex-col justify-between">
                 <span className="text-xs font-mono text-text-muted uppercase tracking-wider mb-3">CRM Sync Validation</span>
                 <div className="relative w-full aspect-square overflow-hidden rounded-xs">
                   <Image
@@ -262,7 +262,7 @@ export default function RevenueHeroCaseStudy() {
                 </div>
               </div>
 
-              <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 flex flex-col justify-between">
+              <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 flex flex-col justify-between">
                 <span className="text-xs font-mono text-text-muted uppercase tracking-wider mb-3">Instant Calendar Booking</span>
                 <div className="relative w-full aspect-[1200/627] overflow-hidden rounded-xs my-auto">
                   <Image
@@ -279,13 +279,13 @@ export default function RevenueHeroCaseStudy() {
         </section>
 
         {/* 10. IMPACT & REFLECTION */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] · Outcomes
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 CRO Results &amp; Takeaways
               </h2>
             </div>
@@ -295,16 +295,16 @@ export default function RevenueHeroCaseStudy() {
                   By restructuring the landing page around high-intent buyer pain points—transparent pricing, proof of CRM stability, and instant calendar booking—the redesigned experience achieved significant conversion uplift across organic and paid campaign traffic.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 my-4">
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
-                    <span className="text-2xl font-light text-text-primary block mb-1">42%</span>
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
+                    <span className="text-2xl font-light text-white block mb-1">42%</span>
                     <span className="text-xs text-text-secondary">Lift in Demo Requests</span>
                   </div>
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
-                    <span className="text-2xl font-light text-text-primary block mb-1">1.8s</span>
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
+                    <span className="text-2xl font-light text-white block mb-1">1.8s</span>
                     <span className="text-xs text-text-secondary">Average Page Load Time</span>
                   </div>
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
-                    <span className="text-2xl font-light text-text-primary block mb-1">0%</span>
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
+                    <span className="text-2xl font-light text-white block mb-1">0%</span>
                     <span className="text-xs text-text-secondary">Drop-off on Pricing Tier</span>
                   </div>
                 </div>
@@ -317,7 +317,7 @@ export default function RevenueHeroCaseStudy() {
         </section>
 
         {/* 11. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

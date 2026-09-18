@@ -9,11 +9,11 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export default function BindrAICaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen text-[#18191F] overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
         
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
@@ -25,12 +25,12 @@ export default function BindrAICaseStudy() {
               Bindr.AI
             </h1>
             
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               Designing an all-in, not all-in-one operations hub that connects SaaS marketplaces and workflows for small business operators.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1 font-mono">Role</span>
                 <span className="text-base font-medium text-white">Freelance Product Designer · Researcher & Designer</span>
@@ -67,7 +67,7 @@ export default function BindrAICaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -80,7 +80,7 @@ export default function BindrAICaseStudy() {
         {/* 2. FEATURED COVER IMAGE */}
         <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16">
           <ScrollReveal delay={0.2} className="w-full max-w-[1024px] mx-auto">
-            <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-xl">
+            <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-xl">
               <Image
                 src="/images/hero-dashboard.png"
                 alt="Case Study: Bindr.AI Small Business Operations Platform"
@@ -100,7 +100,7 @@ export default function BindrAICaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] · Overview
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 All-in, not all-in-one
               </h2>
             </div>
@@ -118,13 +118,13 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 4. THE PROBLEM Section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] · The Problem
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Software management fatigue
               </h2>
             </div>
@@ -147,13 +147,13 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 5. APPROACH Section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] · Design Process
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Unifying the flow
               </h2>
             </div>
@@ -166,7 +166,7 @@ export default function BindrAICaseStudy() {
                   To communicate this transformation on the landing page, we mapped a direct before-and-after interactive comparison table, illustrating how consolidating fragmented apps clears admin load.
                 </p>
                 <div className="pt-6">
-                  <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                  <div className="relative w-full aspect-[16/9] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                     <Image
                       src="/images/before-after.png"
                       alt="Bindr.AI Before and After comparison matrix"
@@ -182,13 +182,13 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 6. DESIGN SYSTEM Section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] · Design System
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 The visual core
               </h2>
             </div>
@@ -197,25 +197,25 @@ export default function BindrAICaseStudy() {
                 
                 {/* Palette */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-text-primary">Palette Specimen</h3>
+                  <h3 className="text-lg font-medium text-white">Palette Specimen</h3>
                   <div className="grid grid-cols-4 gap-4 py-4">
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-sm bg-[#F14C52] border border-border-light mb-2"></div>
+                      <div className="w-12 h-12 rounded-sm bg-[#F14C52] border border-border-default mb-2"></div>
                       <span className="text-xs font-mono">#F14C52</span>
                       <span className="text-[10px] text-text-muted">Coral Accent</span>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-sm bg-[#18191F] border border-border-light mb-2"></div>
+                      <div className="w-12 h-12 rounded-sm bg-[#18191F] border border-border-default mb-2"></div>
                       <span className="text-xs font-mono">#18191F</span>
                       <span className="text-[10px] text-text-muted">Charcoal Header</span>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-sm bg-white border border-border-light mb-2"></div>
+                      <div className="w-12 h-12 rounded-sm bg-white/5 border border-border-default mb-2"></div>
                       <span className="text-xs font-mono">#FFFFFF</span>
                       <span className="text-[10px] text-text-muted">Canvas White</span>
                     </div>
                     <div className="flex flex-col items-center">
-                      <div className="w-12 h-12 rounded-sm bg-[#F0F0F0] border border-border-light mb-2"></div>
+                      <div className="w-12 h-12 rounded-sm bg-[#F0F0F0] border border-border-default mb-2"></div>
                       <span className="text-xs font-mono">#F0F0F0</span>
                       <span className="text-[10px] text-text-muted">Gray Section</span>
                     </div>
@@ -224,7 +224,7 @@ export default function BindrAICaseStudy() {
 
                 {/* Typography and Buttons */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-text-primary">Typography & Buttons</h3>
+                  <h3 className="text-lg font-medium text-white">Typography & Buttons</h3>
                   <p>
                     Typography utilizes Poppins, emphasizing structured weight scales and loose line heights. Button UI components are strictly pill-shaped (50px borders) to create an editorial SaaS look:
                   </p>
@@ -246,12 +246,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Layout and Icons */}
                 <div className="space-y-4">
-                  <h3 className="text-lg font-medium text-text-primary">Grid & Illustrations</h3>
+                  <h3 className="text-lg font-medium text-white">Grid & Illustrations</h3>
                   <p>
                     Worksheets and options utilize soft rounded cards with drop shadows. Standard icons sit inside light coral or pink tint chips to anchor scannable grids. The marketing narrative uses flat vector illustrations in the brand palette, contrasted with real screenshots for technical workflows.
                   </p>
                   <div className="pt-4">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/about-illustration.png"
                         alt="Bindr.AI flat illustration for team collaboration"
@@ -269,13 +269,13 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 7. SCEREENS Section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] · Interface Walkthrough
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Key screens
               </h2>
             </div>
@@ -284,12 +284,12 @@ export default function BindrAICaseStudy() {
                 
                 {/* Screen 1 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">Workflows & Tasks</h3>
+                  <h3 className="text-xl font-medium text-white">Workflows & Tasks</h3>
                   <p>
                     The home dashboard organizes open tasks, pending document approvals, and timesheets into a single feed. Sidebar shortcuts group HR, organizational charts, and payroll tools.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/product-task-dashboard.png"
                         alt="In-app task and approval workflow screen"
@@ -303,12 +303,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 2 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">How it works</h3>
+                  <h3 className="text-xl font-medium text-white">How it works</h3>
                   <p>
                     A step-by-step interactive accordion walks operators through adding team members, setting up direct single sign-ons, selecting marketplace widgets, and assigning delegate duties.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/how-it-works-accordion.png"
                         alt="Setup accordion showing Single Sign-On workspace"
@@ -322,12 +322,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 3 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">App Marketplace</h3>
+                  <h3 className="text-xl font-medium text-white">App Marketplace</h3>
                   <p>
                     The application marketplace lists widgets for timesheet tracking, e-signatures, safety checkins, expense logs, and payroll calculations.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/marketplace-grid.png"
                         alt="App store displaying customizable service integrations"
@@ -341,12 +341,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 4 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">Data Security</h3>
+                  <h3 className="text-xl font-medium text-white">Data Security</h3>
                   <p>
                     A dedicated security grid details advanced client data protection, role access authorization, and secure backups, instilling startup confidence.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/9] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/security-trust.png"
                         alt="Data security and protection encryption indicators"
@@ -360,12 +360,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 5 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">Goals & OKRs</h3>
+                  <h3 className="text-xl font-medium text-white">Goals & OKRs</h3>
                   <p>
                     High-level trackers allow managers to publish team goals and lock sensitive performance reviews behind security scopes.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/product-goals.png"
                         alt="Goals and OKRs interface displaying team objectives"
@@ -379,12 +379,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 6 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">Transparent Pricing</h3>
+                  <h3 className="text-xl font-medium text-white">Transparent Pricing</h3>
                   <p>
                     A clean 3-tier matrix outlines pricing options, letting businesses choose between the free tier, core utilities, or customized developer additions.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/pricing-tiers.png"
                         alt="Pricing options presenting Basic, Essential, and Advanced tiers"
@@ -398,12 +398,12 @@ export default function BindrAICaseStudy() {
 
                 {/* Screen 7 */}
                 <div className="space-y-4">
-                  <h3 className="text-xl font-medium text-text-primary">Mobile Experience</h3>
+                  <h3 className="text-xl font-medium text-white">Mobile Experience</h3>
                   <p>
                     Presents responsive screens for on-the-go managers. Timesheet details, onboarding tasks, and company structures align automatically to mobile dimensions.
                   </p>
                   <div className="pt-2">
-                    <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded-sm overflow-hidden shadow-sm">
+                    <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-sm">
                       <Image
                         src="/images/mobile-screens.png"
                         alt="Timesheets, kiosk, and dashboard workflows on stacked smartphone displays"
@@ -421,13 +421,13 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 8. REFLECTION Section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [06] · Reflection
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Outcomes & learnings
               </h2>
             </div>
@@ -448,7 +448,7 @@ export default function BindrAICaseStudy() {
         </section>
 
         {/* 9. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

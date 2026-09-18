@@ -9,10 +9,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export default function SMATCaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen text-[#18191F] overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
@@ -24,12 +24,12 @@ export default function SMATCaseStudy() {
               SMAT: Real-Time Social Audio &amp; Journey Coordination
             </h1>
 
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               Designing a synchronized social ecosystem that eliminates location lag and delivers simultaneous, multi-device audio streaming with proactive travel coordination.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1 font-mono">Client</span>
                 <span className="text-base font-medium text-white">Concept Lab / Tunerfix Studios</span>
@@ -62,7 +62,7 @@ export default function SMATCaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -75,7 +75,7 @@ export default function SMATCaseStudy() {
         {/* 2. FEATURED COVER IMAGE */}
         <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16">
           <ScrollReveal delay={0.2} className="w-full max-w-[1024px] mx-auto">
-            <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-xl">
+            <div className="relative w-full aspect-[16/9] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-xl">
               <Image
                 src="/images/project-smat.png"
                 alt="Case Study: SMAT Social Audio Platform"
@@ -95,7 +95,7 @@ export default function SMATCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] · Overview
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Connecting moments in real-time
               </h2>
             </div>
@@ -113,13 +113,13 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 4. THE INNOVATION / SOLUTION */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] · Innovation
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Audio-Sync &amp; Journey Intelligence
               </h2>
             </div>
@@ -130,11 +130,11 @@ export default function SMATCaseStudy() {
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-6">
-                  <div className="p-6 bg-white border border-border-light rounded-sm shadow-sm space-y-3">
+                  <div className="p-6 bg-white/5 border border-border-default rounded-sm shadow-sm space-y-3">
                     <span className="text-xs font-mono text-[#6C5DD3] uppercase tracking-wider font-semibold">
                       Feature 01
                     </span>
-                    <h3 className="text-lg font-medium text-text-primary">
+                    <h3 className="text-lg font-medium text-white">
                       Proprietary Audio-Sync Engine
                     </h3>
                     <p className="text-sm text-text-secondary leading-relaxed">
@@ -142,11 +142,11 @@ export default function SMATCaseStudy() {
                     </p>
                   </div>
 
-                  <div className="p-6 bg-white border border-border-light rounded-sm shadow-sm space-y-3">
+                  <div className="p-6 bg-white/5 border border-border-default rounded-sm shadow-sm space-y-3">
                     <span className="text-xs font-mono text-[#6C5DD3] uppercase tracking-wider font-semibold">
                       Feature 02
                     </span>
-                    <h3 className="text-lg font-medium text-text-primary">
+                    <h3 className="text-lg font-medium text-white">
                       Journey Intelligence Overlay
                     </h3>
                     <p className="text-sm text-text-secondary leading-relaxed">
@@ -164,13 +164,13 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 5. DESIGN SYSTEM & FOUNDATIONS */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] · Design System
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Color &amp; Typography
               </h2>
             </div>
@@ -181,7 +181,7 @@ export default function SMATCaseStudy() {
                 </p>
 
                 {/* Palette Specimen */}
-                <div className="p-6 bg-white border border-border-light rounded-sm shadow-sm space-y-4">
+                <div className="p-6 bg-white/5 border border-border-default rounded-sm shadow-sm space-y-4">
                   <h4 className="text-xs font-mono uppercase tracking-wider text-text-muted">Brand Color Scale</h4>
                   <div className="grid grid-cols-3 sm:grid-cols-6 gap-3">
                     {[
@@ -194,10 +194,10 @@ export default function SMATCaseStudy() {
                     ].map((c) => (
                       <div key={c.hex} className="flex flex-col items-center text-center">
                         <div
-                          className="w-10 h-10 rounded-sm border border-border-light mb-1.5 shadow-xs"
+                          className="w-10 h-10 rounded-sm border border-border-default mb-1.5 shadow-xs"
                           style={{ backgroundColor: c.hex }}
                         />
-                        <span className="text-[11px] font-mono text-text-primary">{c.hex}</span>
+                        <span className="text-[11px] font-mono text-white">{c.hex}</span>
                         <span className="text-[9px] text-text-muted">{c.name}</span>
                       </div>
                     ))}
@@ -215,8 +215,8 @@ export default function SMATCaseStudy() {
         {/* 6. DESIGN SYSTEM SPEC SHEET IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-8">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-8">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Specimen Document · Design System Version 1.0</span>
                 <span className="text-xs font-mono text-text-muted">1640 × 5434 px</span>
               </div>
@@ -233,13 +233,13 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 7. INTERACTION ARCHITECTURE & WIREFRAMES */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] · User Flows
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Information Architecture &amp; Wireframes
               </h2>
             </div>
@@ -259,8 +259,8 @@ export default function SMATCaseStudy() {
         {/* 8. WIREFRAME IMAGE SECTION */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Wireframe Architecture &amp; Key Screens</span>
                 <span className="text-xs font-mono text-text-muted">Flow Exploration</span>
               </div>
@@ -278,13 +278,13 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 9. HIGH-FIDELITY INTERFACE WALKTHROUGH */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] · High-Fidelity Design
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Key Product Screens
               </h2>
             </div>
@@ -306,8 +306,8 @@ export default function SMATCaseStudy() {
         {/* 10. HIGH-FIDELITY SHOWCASE IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">High-Fidelity Interface Showcase</span>
                 <span className="text-xs font-mono text-text-muted">Final Deliverable</span>
               </div>
@@ -325,13 +325,13 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 11. REFLECTION & OUTCOMES */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [06] · Reflection
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Outcomes &amp; Learnings
               </h2>
             </div>
@@ -349,7 +349,7 @@ export default function SMATCaseStudy() {
         </section>
 
         {/* 12. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

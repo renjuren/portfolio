@@ -2,10 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import Image from "next/image";
-import Link from "next/link";
-import AnimatedText from "@/components/ui/AnimatedText";
-import ScrollReveal from "@/components/ui/ScrollReveal";
+import PillButton from "@/components/ui/PillButton";
 
 export default function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -14,82 +11,115 @@ export default function Hero() {
     offset: ["start start", "end start"],
   });
 
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
-  const imageScale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
-  const textOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+  const textOpacity = useTransform(scrollYProgress, [0, 0.6], [1, 0]);
+  const textY = useTransform(scrollYProgress, [0, 0.6], [0, -60]);
 
   return (
     <section
       id="home"
       ref={containerRef}
-      className="relative min-h-screen pt-24 md:pt-32"
+      className="relative min-h-screen flex flex-col items-center justify-center text-center px-6"
     >
-      {/* Hero Text */}
       <motion.div
-        className="container-max text-center mb-20 md:mb-28"
-        style={{ opacity: textOpacity }}
+        className="relative z-10 max-w-5xl mx-auto"
+        style={{ opacity: textOpacity, y: textY }}
       >
-        <h1 className="text-display mb-10 md:mb-12">
-          <AnimatedText text="Enterprise SaaS, designed for complexity." className="justify-center" />
-        </h1>
-        <ScrollReveal delay={0.4}>
-          <p className="text-body-lg max-w-3xl mx-auto uppercase tracking-widest text-text-secondary">
-            Senior Product Designer building data-dense workflows, design systems, and the tooling that connects them.
-          </p>
-        </ScrollReveal>
+        {/* Name */}
+        <motion.h1
+          className="text-[clamp(3rem,10vw,6rem)] font-bold tracking-[-0.04em] leading-[1.05] text-white mb-4"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+        >
+          RENJU JOSEPH
+        </motion.h1>
+
+        {/* Title */}
+        <motion.p
+          className="text-lg md:text-xl text-text-muted font-medium tracking-[0.15em] uppercase mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.2,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
+          Senior Product Designer
+        </motion.p>
+
+        {/* Tagline */}
+        <motion.p
+          className="text-[clamp(1.5rem,3.5vw,2.5rem)] font-light leading-[1.3] tracking-tight text-text-secondary max-w-3xl mx-auto mb-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.35,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
+          Enterprise SaaS, designed for complexity.
+        </motion.p>
+
+        {/* Subtitle */}
+        <motion.p
+          className="text-base md:text-lg text-text-muted max-w-2xl mx-auto mb-12 leading-relaxed"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.5,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
+          Building data-dense workflows, design systems, and the tooling that
+          connects them.
+        </motion.p>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.8,
+            delay: 0.65,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        >
+          <PillButton href="#projects" variant="primary">
+            View Selected Work
+          </PillButton>
+        </motion.div>
       </motion.div>
 
-      {/* Hero Image with Parallax */}
-      <ScrollReveal delay={0.6} className="container-max">
-        <div className="relative w-full aspect-video overflow-hidden rounded-sm">
-          <motion.div
-            className="absolute inset-0"
-            style={{ y: imageY, scale: imageScale }}
-          >
-            <Image
-              src="/images/project-design-system-v5.png"
-              alt="Enterprise Design System scaling, featured key project by Renju Joseph"
-              fill
-              priority
-              className="object-contain"
-              sizes="(max-width: 768px) calc(100vw - 3rem), (max-width: 1024px) calc(100vw - 6rem), (max-width: 1440px) calc(100vw - 8rem), 1312px"
-            />
-          </motion.div>
-
-          {/* View Project Overlay Button */}
-          <Link
-            href="/projects/idp-design-system-2026"
-            className="absolute inset-0 flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300"
-          >
-            <motion.span
-              className="bg-white/90 backdrop-blur-sm text-text-primary px-8 py-4 rounded-full text-sm font-medium tracking-wide uppercase flex items-center gap-3 cursor-pointer"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              id="hero-view-project"
-            >
-              <span>View Project</span>
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 16 16"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M3 8H13M13 8L9 4M13 8L9 12"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </motion.span>
-          </Link>
-
-          {/* Bottom gradient */}
-          <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-bg-light/30 to-transparent" />
-        </div>
-      </ScrollReveal>
+      {/* Scroll Indicator */}
+      <motion.div
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-3 z-10"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1.2, duration: 0.8 }}
+      >
+        <span className="text-xs text-text-muted tracking-[0.15em] uppercase">
+          Scroll to explore
+        </span>
+        <motion.svg
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+          className="text-text-muted"
+          style={{ animation: "bounce-arrow 2s ease-in-out infinite" }}
+        >
+          <path
+            d="M10 4V16M10 16L5 11M10 16L15 11"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </motion.svg>
+      </motion.div>
     </section>
   );
 }

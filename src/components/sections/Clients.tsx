@@ -18,27 +18,53 @@ const services = [
   "CRO",
 ];
 
+// Double the items for seamless infinite scroll
+const doubledServices = [...services, ...services];
+
 export default function Clients() {
   return (
-    <section className="section-padding border-t border-border-light">
-      <div className="container-max">
+    <section className="py-20 md:py-28 relative z-10 overflow-hidden">
+      <div className="container-max mb-12">
         <ScrollReveal>
-          <p className="text-label text-text-secondary text-center mb-16">
-            Skills & Capabilities
-          </p>
+          <p className="text-label text-center">Skills & Capabilities</p>
         </ScrollReveal>
+      </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-px bg-border-light">
-          {services.map((service, index) => (
+      {/* Row 1 - scrolls left */}
+      <div className="group mb-4">
+        <div
+          className="flex gap-4 w-max hover:[animation-play-state:paused]"
+          style={{ animation: "marquee 40s linear infinite" }}
+        >
+          {doubledServices.map((service, index) => (
             <motion.div
-              key={service}
-              className="bg-bg-light flex items-center justify-center py-10 md:py-14 px-6 group cursor-default"
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ delay: index * 0.05, duration: 0.5 }}
+              key={`row1-${index}`}
+              className="glass-card px-6 py-3.5 rounded-full whitespace-nowrap flex-shrink-0 cursor-default group/item"
+              whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.15)" }}
+              transition={{ duration: 0.2 }}
             >
-              <span className="text-sm md:text-base font-medium tracking-wider text-text-secondary/40 group-hover:text-text-primary transition-all duration-500 select-none text-center uppercase">
+              <span className="text-sm font-medium tracking-wider text-text-muted group-hover/item:text-white transition-colors duration-300 uppercase">
+                {service}
+              </span>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+
+      {/* Row 2 - scrolls right */}
+      <div className="group">
+        <div
+          className="flex gap-4 w-max hover:[animation-play-state:paused]"
+          style={{ animation: "marquee-reverse 45s linear infinite" }}
+        >
+          {[...doubledServices].reverse().map((service, index) => (
+            <motion.div
+              key={`row2-${index}`}
+              className="glass-card px-6 py-3.5 rounded-full whitespace-nowrap flex-shrink-0 cursor-default group/item"
+              whileHover={{ scale: 1.05, borderColor: "rgba(255,255,255,0.15)" }}
+              transition={{ duration: 0.2 }}
+            >
+              <span className="text-sm font-medium tracking-wider text-text-muted group-hover/item:text-white transition-colors duration-300 uppercase">
                 {service}
               </span>
             </motion.div>

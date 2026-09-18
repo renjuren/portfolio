@@ -9,10 +9,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export default function PeerShareCaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen text-[#18191F] overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen text-[#18191F] overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
@@ -24,12 +24,12 @@ export default function PeerShareCaseStudy() {
               PeerShare: Enterprise Resource Ecosystem
             </h1>
 
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               In hyper-local environments like university campuses, access to high-value resources is often restricted by cost rather than availability. PeerShare is a community-driven mobile platform that solves this inefficiency through structured borrowing logic and gamified trust verification.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1 font-mono">Client</span>
                 <span className="text-base font-medium text-white">Academic Research Project</span>
@@ -62,7 +62,7 @@ export default function PeerShareCaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -75,7 +75,7 @@ export default function PeerShareCaseStudy() {
         {/* 2. FEATURED COVER IMAGE */}
         <section className="container-max py-12 md:py-16 -mt-10 md:-mt-16">
           <ScrollReveal delay={0.2} className="w-full max-w-[1024px] mx-auto">
-            <div className="relative w-full aspect-[16/9] bg-white border border-border-light rounded-sm overflow-hidden shadow-xl">
+            <div className="relative w-full aspect-[16/9] bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-xl">
               <Image
                 src="/images/project-peershare.png"
                 alt="Case Study: PeerShare Resource Ecosystem"
@@ -95,7 +95,7 @@ export default function PeerShareCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] · Context
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 The campus resource paradox
               </h2>
             </div>
@@ -116,13 +116,13 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 4. USER JOURNEY MAPPING */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] · Journey Mapping
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 End-to-End Borrowing Logic
               </h2>
             </div>
@@ -142,8 +142,8 @@ export default function PeerShareCaseStudy() {
         {/* 5. JOURNEY MAPPING IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">User Journey Mapping &amp; Touchpoint Breakdown</span>
                 <span className="text-xs font-mono text-text-muted">15 Min Discovery-to-Return Loop</span>
               </div>
@@ -161,13 +161,13 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 6. QUALITATIVE RESEARCH & USER INTERVIEWS */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] · User Research
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Target User Interviews
               </h2>
             </div>
@@ -176,7 +176,7 @@ export default function PeerShareCaseStudy() {
                 <p>
                   We interviewed students across diverse disciplines—undergraduates, postgraduates, and doctoral researchers—to understand how borrowing needs differed between academic departments.
                 </p>
-                <div className="p-6 bg-white border border-border-light rounded-sm shadow-sm space-y-3">
+                <div className="p-6 bg-white/5 border border-border-default rounded-sm shadow-sm space-y-3">
                   <h4 className="text-xs font-mono uppercase tracking-wider text-text-muted">Key Interview Insights</h4>
                   <ul className="space-y-2 text-sm text-text-secondary list-disc pl-5">
                     <li><strong>Institutional Credibility:</strong> 91% of respondents demanded institutional domain (.edu) sign-on to ensure borrowers could be held accountable.</li>
@@ -192,8 +192,8 @@ export default function PeerShareCaseStudy() {
         {/* 7. INTERVIEW ARTIFACT IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Synthesis: Understanding Target User Needs &amp; Interview Notes</span>
                 <span className="text-xs font-mono text-text-muted">Demographic Segmentation</span>
               </div>
@@ -211,13 +211,13 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 8. DESIGN RECOMMENDATIONS & HEURISTICS */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] · Heuristics
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Design Recommendations
               </h2>
             </div>
@@ -227,19 +227,19 @@ export default function PeerShareCaseStudy() {
                   From the interview discoveries, we created an actionable framework divided into three pillars: <strong>UI Usability</strong>, <strong>User Experience Enhancement</strong>, and <strong>System Performance</strong>.
                 </p>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 my-4">
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
                     <span className="text-xs font-mono text-text-muted block mb-1">Pillar 01</span>
-                    <strong className="text-sm block text-text-primary mb-1">UI Usability</strong>
+                    <strong className="text-sm block text-white mb-1">UI Usability</strong>
                     <p className="text-xs text-text-secondary">Clean menus, simplified navigation, and cohesive visual language appealing to young demographics.</p>
                   </div>
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
                     <span className="text-xs font-mono text-text-muted block mb-1">Pillar 02</span>
-                    <strong className="text-sm block text-text-primary mb-1">Frictionless UX</strong>
+                    <strong className="text-sm block text-white mb-1">Frictionless UX</strong>
                     <p className="text-xs text-text-secondary">Streamlined onboarding, customizable profiles, and transparent dispute feedback loops.</p>
                   </div>
-                  <div className="p-4 bg-white border border-border-light rounded-sm">
+                  <div className="p-4 bg-white/5 border border-border-default rounded-sm">
                     <span className="text-xs font-mono text-text-muted block mb-1">Pillar 03</span>
-                    <strong className="text-sm block text-text-primary mb-1">Performance</strong>
+                    <strong className="text-sm block text-white mb-1">Performance</strong>
                     <p className="text-xs text-text-secondary">Fast asset caching, lightweight listing feeds, and clear error recovery dialogues.</p>
                   </div>
                 </div>
@@ -251,8 +251,8 @@ export default function PeerShareCaseStudy() {
         {/* 9. RECOMMENDATIONS SPEC SHEET IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Design Recommendations &amp; Interaction Principles</span>
                 <span className="text-xs font-mono text-text-muted">Synthesis Matrix</span>
               </div>
@@ -270,13 +270,13 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 10. MID-FIDELITY WIREFRAMES */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] · Wireframes
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Mid-Fidelity Prototypes
               </h2>
             </div>
@@ -296,8 +296,8 @@ export default function PeerShareCaseStudy() {
         {/* 11. WIREFRAMES IMAGE */}
         <section className="container-max py-8">
           <ScrollReveal delay={0.1} className="w-full max-w-[1024px] mx-auto">
-            <div className="bg-white border border-border-light rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
-              <div className="mb-4 pb-3 border-b border-border-light flex items-center justify-between">
+            <div className="bg-white/5 border border-border-default rounded-sm overflow-hidden shadow-md p-4 sm:p-6">
+              <div className="mb-4 pb-3 border-b border-border-default flex items-center justify-between">
                 <span className="text-xs font-mono uppercase tracking-wider text-text-secondary">Interactive Mid-Fidelity Screen Prototypes</span>
                 <span className="text-xs font-mono text-text-muted">Home &amp; Activity Feeds</span>
               </div>
@@ -315,13 +315,13 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 12. REFLECTION */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [06] · Learnings
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Impact &amp; Scalability
               </h2>
             </div>
@@ -339,7 +339,7 @@ export default function PeerShareCaseStudy() {
         </section>
 
         {/* 13. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

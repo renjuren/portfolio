@@ -1,72 +1,103 @@
 @import "tailwindcss";
 
-/* === Design Tokens === */
+/* === Dark Theme Design Tokens === */
 :root {
-  --bg-light: #F4F4F0;
-  --bg-dark: #222222;
-  --text-primary: #1A1A1A;
-  --text-secondary: #666666;
-  --text-light: #F4F4F0;
-  --text-muted: #999999;
-  --border-color: #E0E0DC;
-  --border-dark: #333333;
+  /* Backgrounds */
+  --bg-primary: #000000;
+  --bg-surface: rgba(18, 18, 22, 0.65);
+  --bg-surface-hover: rgba(32, 32, 38, 0.85);
+
+  /* Text */
+  --text-primary: #FFFFFF;
+  --text-secondary: #E8E4DE;
+  --text-muted: #888888;
+  --text-dim: #555555;
+
+  /* Borders */
+  --border-color: rgba(255, 255, 255, 0.08);
+  --border-hover: rgba(255, 255, 255, 0.15);
+
+  /* Accents */
+  --accent-orange: #E8820C;
+  --accent-orange-dark: #D44D00;
+  --accent-orange-glow: rgba(232, 130, 12, 0.4);
+  --accent-green: #00C853;
+  --accent-green-dark: #2ECC71;
+  --accent-teal: #009688;
+  --accent-teal-light: #1ABC9C;
+
+  /* Blob colors */
+  --blob-amber: #E8820C;
+  --blob-amber-alt: #C46A08;
+  --blob-green: #00C853;
+  --blob-green-alt: #2ECC71;
+  --blob-teal: #009688;
+  --blob-teal-alt: #1ABC9C;
 }
 
 /* === Tailwind v4 Theme === */
 @theme inline {
-  --color-bg-light: var(--bg-light);
-  --color-bg-dark: var(--bg-dark);
+  --color-bg-primary: var(--bg-primary);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-surface-hover: var(--bg-surface-hover);
   --color-text-primary: var(--text-primary);
   --color-text-secondary: var(--text-secondary);
-  --color-text-light: var(--text-light);
   --color-text-muted: var(--text-muted);
-  --color-border-light: var(--border-color);
-  --color-border-dark: var(--border-dark);
+  --color-text-dim: var(--text-dim);
+  --color-border-default: var(--border-color);
+  --color-border-hover: var(--border-hover);
+  --color-accent-orange: var(--accent-orange);
+  --color-accent-orange-dark: var(--accent-orange-dark);
+  --color-accent-green: var(--accent-green);
+  --color-accent-teal: var(--accent-teal);
   --font-sans: var(--font-inter);
 }
 
 /* === Base Styles === */
 html {
-  scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
 }
 
 body {
-  background-color: var(--bg-light);
-  color: var(--text-primary);
+  background-color: #000000;
+  color: #FFFFFF;
   font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
   overflow-x: hidden;
 }
 
 /* === Typography Scale === */
 .text-display {
-  font-size: clamp(3rem, 8vw, 9rem);
-  line-height: 1.1;
-  letter-spacing: -0.03em;
-  font-weight: 300;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .text-display-sm {
-  font-size: clamp(2.5rem, 5vw, 5rem);
-  line-height: 1;
-  letter-spacing: -0.02em;
-  font-weight: 300;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  font-weight: 700;
+  color: var(--text-primary);
 }
 
 .text-heading {
   font-size: clamp(1.5rem, 3vw, 3rem);
   line-height: 1.15;
   letter-spacing: -0.02em;
-  font-weight: 400;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 .text-label {
   font-size: 0.75rem;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.15em;
   text-transform: uppercase;
-  font-weight: 500;
+  font-weight: 600;
+  color: var(--text-muted);
 }
 
 .text-body {
@@ -83,23 +114,23 @@ body {
   color: var(--text-secondary);
 }
 
-/* === Section Spacing === */
+/* === Section Spacing (generous for cinematic feel) === */
 .section-padding {
-  padding-top: 6rem;
-  padding-bottom: 6rem;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 10rem;
+    padding-bottom: 10rem;
   }
 }
 
 @media (min-width: 1024px) {
   .section-padding {
-    padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-top: 12rem;
+    padding-bottom: 12rem;
   }
 }
 
@@ -125,28 +156,77 @@ body {
   }
 }
 
+/* === Glassmorphism Utilities === */
+.glass-card {
+  background: rgba(30, 30, 30, 0.6);
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+}
+
+.glass-card-hover:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+}
+
+.glass-nav {
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-nav-scrolled {
+  background: rgba(0, 0, 0, 0.92);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+/* === Gradient Buttons === */
+.btn-gradient-orange {
+  background: linear-gradient(135deg, #E8820C 0%, #D44D00 100%);
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-gradient-orange:hover {
+  box-shadow: 0 0 25px rgba(232, 130, 12, 0.4);
+}
+
+.btn-glass {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #FFFFFF;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-glass:hover {
+  border-color: #E8820C;
+  box-shadow: 0 0 15px rgba(232, 130, 12, 0.2);
+}
+
 /* === Custom Scrollbar === */
 ::-webkit-scrollbar {
   width: 6px;
 }
 
 ::-webkit-scrollbar-track {
-  background: var(--bg-light);
+  background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--text-muted);
+  background: rgba(255, 255, 255, 0.15);
   border-radius: 3px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--text-secondary);
+  background: rgba(255, 255, 255, 0.3);
 }
 
 /* === Selection === */
 ::selection {
-  background-color: var(--text-primary);
-  color: var(--bg-light);
+  background-color: rgba(232, 130, 12, 0.4);
+  color: #FFFFFF;
 }
 
 /* === Stat Counter Animation === */
@@ -154,4 +234,63 @@ body {
   syntax: "<integer>";
   initial-value: 0;
   inherits: false;
+}
+
+/* === Keyframe Animations === */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-reverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  33% { transform: translate(30px, -30px) scale(1.05); }
+  66% { transform: translate(-20px, 20px) scale(0.95); }
+}
+
+@keyframes bounce-arrow {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+
+@keyframes spin-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes typing-cursor {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* === Noise Texture Overlay === */
+.noise-overlay::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* === Prefers Reduced Motion === */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .noise-overlay::before {
+    display: none;
+  }
 }

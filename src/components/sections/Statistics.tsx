@@ -48,7 +48,7 @@ export default function Statistics() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section className="section-padding border-t border-border-light">
+    <section className="section-padding relative z-10">
       <div className="container-max" ref={ref}>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-4">
           {statistics.map((stat, index) => (
@@ -56,16 +56,20 @@ export default function Statistics() {
               key={stat.label}
               className={`text-center md:text-left ${
                 index < statistics.length - 1
-                  ? "md:border-r md:border-border-light"
+                  ? "md:border-r md:border-border-default"
                   : ""
               } md:px-6 first:md:pl-0 last:md:pr-0`}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ delay: index * 0.15, duration: 0.6 }}
+              transition={{
+                delay: index * 0.15,
+                duration: 0.6,
+                ease: [0.16, 1, 0.3, 1],
+              }}
             >
               <div
-                className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-text-primary mb-3"
+                className="text-5xl md:text-6xl lg:text-7xl font-light tracking-tight text-white mb-3"
                 style={{ fontVariantNumeric: "tabular-nums" }}
               >
                 <AnimatedCounter
@@ -74,7 +78,7 @@ export default function Statistics() {
                   inView={isInView}
                 />
               </div>
-              <p className="text-label text-text-secondary">{stat.label}</p>
+              <p className="text-label">{stat.label}</p>
             </motion.div>
           ))}
         </div>

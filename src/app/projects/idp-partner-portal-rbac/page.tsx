@@ -10,10 +10,10 @@ import ScrollReveal from "@/components/ui/ScrollReveal";
 export default function AccessManagementCaseStudy() {
   return (
     <>
-      <Header lightOnTransparent={true} />
-      <main className="bg-bg-light min-h-screen overflow-x-clip">
+      <Header />
+      <main className="bg-black min-h-screen overflow-x-clip">
         {/* 1. HERO (Dark Background Section) */}
-        <section className="bg-bg-dark text-text-light pt-32 pb-20 md:pt-40 md:pb-28">
+        <section className="bg-black text-white pt-32 pb-20 md:pt-40 md:pb-28">
           <div className="container-max">
             <ScrollReveal delay={0}>
               <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
@@ -25,12 +25,12 @@ export default function AccessManagementCaseStudy() {
               Access Management (RBAC)
             </h1>
             
-            <p className="text-body-lg text-text-light/80 max-w-3xl mb-12 font-light leading-relaxed">
+            <p className="text-body-lg text-white/80 max-w-3xl mb-12 font-light leading-relaxed">
               Designing a role-based access system that lets external university partners safely manage who on their team can do what, without a support ticket.
             </p>
 
             {/* Metadata Strip */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-dark mb-12">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-8 border-t border-b border-border-default mb-12">
               <div className="flex flex-col">
                 <span className="text-[12px] text-text-muted uppercase tracking-wider mb-1 font-mono">Client</span>
                 <span className="text-base font-medium text-white">IDP Education</span>
@@ -61,7 +61,7 @@ export default function AccessManagementCaseStudy() {
                 ].map((item) => (
                   <span
                     key={item}
-                    className="text-xs font-mono border border-border-dark px-3 py-1.5 rounded-full text-text-light/70"
+                    className="text-xs font-mono border border-border-default px-3 py-1.5 rounded-full text-white/70"
                   >
                     {item}
                   </span>
@@ -94,7 +94,7 @@ export default function AccessManagementCaseStudy() {
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [01] · Context
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Where this started
               </h2>
             </div>
@@ -112,13 +112,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 4. THE PROBLEM section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [02] · Analysis
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Four failures of legacy access
               </h2>
             </div>
@@ -127,8 +127,8 @@ export default function AccessManagementCaseStudy() {
                 
                 {/* Failure 1 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">01</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">01</span>
                     <span>No partner-side access management</span>
                   </h3>
                   <p>
@@ -138,8 +138,8 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Failure 2 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">02</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">02</span>
                     <span>Advert-centric, incomplete permission model</span>
                   </h3>
                   <p>
@@ -149,8 +149,8 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Failure 3 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">03</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">03</span>
                     <span>Over-provisioning risk</span>
                   </h3>
                   <p>
@@ -160,8 +160,8 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Failure 4 */}
                 <div className="space-y-3">
-                  <h3 className="text-lg font-medium text-text-primary flex items-center">
-                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-light rounded-sm mr-3">04</span>
+                  <h3 className="text-lg font-medium text-white flex items-center">
+                    <span className="font-mono text-xs text-text-secondary bg-white px-2 py-0.5 border border-border-default rounded-sm mr-3">04</span>
                     <span>Asymmetry between internal and external needs</span>
                   </h3>
                   <p>
@@ -175,29 +175,29 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 5. THE CORE MODEL section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [03] · Access Architecture
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 The core model
               </h2>
             </div>
             <div className="lg:col-span-8">
               <div className="text-body max-w-2xl space-y-6">
-                <p className="text-body-lg font-light text-text-primary">
+                <p className="text-body-lg font-light text-white">
                   I anchored the system on a single, clean architectural chain:
                 </p>
-                <div className="flex flex-wrap items-center gap-2 py-4 text-sm font-mono font-semibold text-text-primary">
-                  <span className="bg-white border border-border-light px-3 py-1.5 rounded">User</span>
+                <div className="flex flex-wrap items-center gap-2 py-4 text-sm font-mono font-semibold text-white">
+                  <span className="bg-white/5 border border-border-default px-3 py-1.5 rounded">User</span>
                   <span className="text-text-muted">→</span>
-                  <span className="bg-bg-dark text-text-light px-3 py-1.5 rounded">Group</span>
+                  <span className="bg-black text-white px-3 py-1.5 rounded">Group</span>
                   <span className="text-text-muted">→</span>
-                  <span className="bg-white border border-border-light px-3 py-1.5 rounded">Role</span>
+                  <span className="bg-white/5 border border-border-default px-3 py-1.5 rounded">Role</span>
                   <span className="text-text-muted">→</span>
-                  <span className="bg-white border border-border-light px-3 py-1.5 rounded">Permission</span>
+                  <span className="bg-white/5 border border-border-default px-3 py-1.5 rounded">Permission</span>
                 </div>
                 <p>
                   To keep access predictable and auditable, a <strong>User</strong> never receives direct permission grants. They can only inherit access by being placed inside a <strong>Group</strong>.
@@ -208,7 +208,7 @@ export default function AccessManagementCaseStudy() {
                 <p className="text-text-secondary italic">
                   Why this matters: university administrators can customize and manage Groups on their own, but they cannot author new Roles. Roles are governed centrally by IDP. This structural boundaries prevent privilege creep while granting partners the autonomy they need to orchestrate their teams. When users belong to multiple groups, their combined access is evaluated as the union of those groups' roles.
                 </p>
-                <div className="relative w-full aspect-[16/7] bg-white border border-border-light rounded overflow-hidden mt-6">
+                <div className="relative w-full aspect-[16/7] bg-white/5 border border-border-default rounded overflow-hidden mt-6">
                   <Image
                     src="/images/rbac-core-model.png"
                     alt="The Access Model: User to Group to Role to Permission"
@@ -223,13 +223,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 6. KEY DESIGN DECISIONS section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [04] · Decisions
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Key design decisions
               </h2>
             </div>
@@ -237,42 +237,42 @@ export default function AccessManagementCaseStudy() {
               <div className="text-body max-w-2xl space-y-8">
                 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">1. Access only via group membership</h4>
+                  <h4 className="font-medium text-white">1. Access only via group membership</h4>
                   <p>
                     By enforcing user-to-group membership as the sole access path, we keep the audit story clean and traceable. Direct user-level overrides are disabled.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">2. Compose, don't author</h4>
+                  <h4 className="font-medium text-white">2. Compose, don't author</h4>
                   <p>
                     University admins compose their custom groups from a list of predefined roles. The ability to create or edit the underlying roles is restricted to the partner interface, preventing arbitrary permission configurations.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">3. Legible roles & permissions before selection</h4>
+                  <h4 className="font-medium text-white">3. Legible roles & permissions before selection</h4>
                   <p>
                     All group and role selection surfaces display the active roles directly in the table, with on-demand info tooltips exposing the precise permissions. Administrators understand exactly what privileges are being extended without needing to navigate away.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">4. Combined access preview and over-provisioning warnings</h4>
+                  <h4 className="font-medium text-white">4. Combined access preview and over-provisioning warnings</h4>
                   <p>
                     When adding users to multiple groups, the interface displays a combined union of their access. If a selected combination yields high-privilege administrative access, the system highlights it with a warning.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">5. Friction by design for destructive actions</h4>
+                  <h4 className="font-medium text-white">5. Friction by design for destructive actions</h4>
                   <p>
                     High-impact changes like deleting custom groups or assigning administrative privileges trigger confirmation screens. These display the impact (such as lists of orphaned users) and require explicit confirmations.
                   </p>
                 </div>
 
                 <div className="space-y-2">
-                  <h4 className="font-medium text-text-primary">6. Contextual UI asymmetry</h4>
+                  <h4 className="font-medium text-white">6. Contextual UI asymmetry</h4>
                   <p>
                     Internal IDP administrators use a dense audit log interface designed for speed, while external university administrators use progressive, plain-language setup screens.
                   </p>
@@ -284,13 +284,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 7. FLOWS & SCREENS section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [05] · Interaction Flows
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Flows & screens
               </h2>
             </div>
@@ -299,11 +299,11 @@ export default function AccessManagementCaseStudy() {
                 
                 {/* Flow 1 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Add a user — method first</h4>
+                  <h4 className="font-medium text-white">Add a user — method first</h4>
                   <p>
                     Clicking "Add user" opens a modal prompting the administrator to choose an onboarding method: single user setup, bulk upload via CSV, or bulk invite via email. This fork streamlines the data-entry steps early in the process.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
+                  <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded overflow-hidden mt-4">
                     <Image
                       src="/images/add-user-method-modal.png"
                       alt="Flow: Add User Method modal selection"
@@ -316,11 +316,11 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 2 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Guided "What they do"</h4>
+                  <h4 className="font-medium text-white">Guided "What they do"</h4>
                   <p>
                     Instead of forcing administrators to navigate technical role descriptions, they select the operational areas a user works in and specify permissions using a compact area × action checkbox grid.
                   </p>
-                  <div className="relative w-full aspect-[16/10] bg-white border border-border-light rounded overflow-hidden mt-4">
+                  <div className="relative w-full aspect-[16/10] bg-white/5 border border-border-default rounded overflow-hidden mt-4">
                     <Image
                       src="/images/area-action-matrix.png"
                       alt="Flow: Area and Action permissions checkbox matrix"
@@ -333,7 +333,7 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 3 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Recommended groups</h4>
+                  <h4 className="font-medium text-white">Recommended groups</h4>
                   <p>
                     Based on selected permission profiles, the system suggests pre-configured groups, labeling the "best match" alongside detail summaries of what access the recommended groups provide.
                   </p>
@@ -341,7 +341,7 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 4 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Direct group selection</h4>
+                  <h4 className="font-medium text-white">Direct group selection</h4>
                   <p>
                     Power users can select groups directly from a data table displaying role details and tooltips, while selected choices display as dismissible visual chips.
                   </p>
@@ -349,7 +349,7 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 5 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Create your own group</h4>
+                  <h4 className="font-medium text-white">Create your own group</h4>
                   <p>
                     A step-by-step setup wizard (Name → Add Roles → Assign People → Review) allows administrators to compose custom teams. The final review screen previews combined privileges and flags potential over-provisioning issues.
                   </p>
@@ -357,7 +357,7 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 6 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Groups list, edit, and delete</h4>
+                  <h4 className="font-medium text-white">Groups list, edit, and delete</h4>
                   <p>
                     The management surface keeps system-governed roles locked under safe defaults while allowing custom groups to be edited or deleted. The deletion flow lists which users will lose access and requires reassignment details.
                   </p>
@@ -365,7 +365,7 @@ export default function AccessManagementCaseStudy() {
 
                 {/* Flow 7 */}
                 <div className="space-y-4">
-                  <h4 className="font-medium text-text-primary">Escape hatch for outsiders</h4>
+                  <h4 className="font-medium text-white">Escape hatch for outsiders</h4>
                   <p>
                     For external contractors and freelancers, a scoped path bypasses group placement. This path restricts access to read-only reporting and flags these accounts for audit tracking.
                   </p>
@@ -377,13 +377,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 8. EDGE CASES section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [06] · Edge Cases
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Designing for edge cases
               </h2>
             </div>
@@ -404,13 +404,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 9. STATUS & NEXT section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [07] · Status
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Status & next
               </h2>
             </div>
@@ -434,13 +434,13 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 10. REFLECTION section */}
-        <section className="container-max py-12 md:py-20 border-t border-border-light">
+        <section className="container-max py-12 md:py-20 border-t border-border-default">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
             <div className="lg:col-span-4">
               <span className="text-xs uppercase tracking-widest text-text-secondary block mb-2 font-mono">
                 [08] · Reflection
               </span>
-              <h2 className="text-heading text-text-primary">
+              <h2 className="text-heading text-white">
                 Reflection
               </h2>
             </div>
@@ -455,7 +455,7 @@ export default function AccessManagementCaseStudy() {
         </section>
 
         {/* 11. NEXT PROJECT LINK AT THE BOTTOM */}
-        <section className="bg-bg-dark text-text-light py-20 md:py-28 border-t border-border-dark">
+        <section className="bg-black text-white py-20 md:py-28 border-t border-border-default">
           <div className="container-max text-center">
             <span className="text-xs uppercase tracking-widest text-text-muted block mb-4 font-mono">
               NEXT CASE STUDY

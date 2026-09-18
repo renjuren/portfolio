@@ -1,64 +1,86 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
 interface AnimatedTextProps {
   text: string;
   className?: string;
   delay?: number;
-  separator?: string;
+  splitBy?: "word" | "line";
 }
+
+const EASING: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function AnimatedText({
   text,
   className = "",
   delay = 0,
-  separator = " ",
+  splitBy = "word",
 }: AnimatedTextProps) {
-  const words = text.split(separator);
+  if (splitBy === "line") {
+    const lines = text.split(/\n|<br\s*\/?>/);
 
-  const container = {
-    hidden: { opacity: 0 },
-    visible: (i = 1) => ({
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.08,
-        delayChildren: delay,
-      },
-    }),
-  };
+    return (
+      <motion.div
+        className={className}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+      >
+        {lines.map((line, i) => (
+          <div key={i} className="overflow-hidden">
+            <motion.div
+              variants={{
+                hidden: { y: "100%" },
+                visible: {
+                  y: "0%",
+                  transition: {
+                    duration: 0.8,
+                    ease: EASING,
+                    delay: delay + i * 0.15,
+                  },
+                },
+              }}
+            >
+              {line}
+            </motion.div>
+          </div>
+        ))}
+      </motion.div>
+    );
+  }
 
-  const child = {
-    hidden: {
-      opacity: 0,
-      y: 40,
-    },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.6,
-        ease: [0.25, 0.1, 0.25, 1] as const,
-      },
-    },
-  };
+  // Word mode
+  const words = text.split(" ");
 
   return (
     <motion.span
       className={`inline-flex flex-wrap ${className}`}
-      variants={container}
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: "-100px" }}
+      viewport={{ once: true }}
     >
-      {words.map((word, index) => (
-        <motion.span
-          key={index}
-          className="inline-block overflow-hidden mr-[0.3em] py-[0.2em] -my-[0.2em]"
-          variants={child}
-        >
-          <span className="inline-block">{word}</span>
-        </motion.span>
+      {words.map((word, i) => (
+        <span key={i} className="overflow-hidden mr-[0.25em]">
+          <motion.span
+            className="inline-block"
+            variants={{
+              hidden: { y: 40, opacity: 0 },
+              visible: {
+                y: 0,
+                opacity: 1,
+                transition: {
+                  duration: 0.7,
+                  ease: EASING,
+                  delay: delay + i * 0.08,
+                },
+              },
+            }}
+          >
+            {word}
+          </motion.span>
+        </span>
       ))}
     </motion.span>
   );

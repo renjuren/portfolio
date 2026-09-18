@@ -1,42 +1,25 @@
 "use client";
 
+import React from "react";
 import { motion } from "framer-motion";
 
 interface SectionLabelProps {
   number: string;
   title?: string;
-  light?: boolean;
 }
 
-export default function SectionLabel({
-  number,
-  title,
-  light = false,
-}: SectionLabelProps) {
+export default function SectionLabel({ number, title }: SectionLabelProps) {
+  const label = title ? `[${number}] · ${title}` : `[${number}]`;
+
   return (
     <motion.div
-      className="flex items-center gap-4 mb-8"
+      className="mb-8 text-[13px] font-medium uppercase tracking-[0.15em] text-text-muted"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-100px" }}
-      transition={{ duration: 0.6 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
     >
-      <span
-        className={`text-label ${
-          light ? "text-text-muted" : "text-text-secondary"
-        }`}
-      >
-        [{number}]
-      </span>
-      {title && (
-        <span
-          className={`text-label ${
-            light ? "text-text-muted" : "text-text-secondary"
-          }`}
-        >
-          · {title}
-        </span>
-      )}
+      {label}
     </motion.div>
   );
 }

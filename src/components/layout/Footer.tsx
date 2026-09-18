@@ -8,7 +8,7 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer id="contact" className="bg-bg-dark text-text-light">
+    <footer id="contact" className="relative z-10 border-t border-border-default">
       <div className="container-max section-padding">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
           {/* Logo Column */}
@@ -16,11 +16,11 @@ export default function Footer() {
             <div>
               <Link
                 href="/"
-                className="text-2xl font-semibold tracking-tight block mb-6"
+                className="text-2xl font-semibold tracking-tight block mb-6 text-white"
               >
                 RENJU JOSEPH.
               </Link>
-              <p className="text-body text-text-muted max-w-xs">
+              <p className="text-sm text-text-muted max-w-xs leading-relaxed">
                 Senior Product Designer building enterprise SaaS for
                 data-dense, complex workflows.
               </p>
@@ -30,15 +30,15 @@ export default function Footer() {
           {/* Contact Column */}
           <ScrollReveal delay={0.1}>
             <div>
-              <h4 className="text-label text-text-muted mb-6">Contact</h4>
+              <h4 className="text-label mb-6">Contact</h4>
               <div className="space-y-3">
                 <a
                   href={`mailto:${footerData.contact.email}`}
-                  className="block text-sm text-text-light/80 hover:text-white transition-colors duration-300"
+                  className="block text-sm text-text-secondary hover:text-white transition-colors duration-300"
                 >
                   {footerData.contact.email}
                 </a>
-                <p className="text-sm text-text-light/60">
+                <p className="text-sm text-text-muted">
                   {footerData.contact.address}
                 </p>
               </div>
@@ -48,13 +48,13 @@ export default function Footer() {
           {/* Navigation Column */}
           <ScrollReveal delay={0.2}>
             <div>
-              <h4 className="text-label text-text-muted mb-6">Navigation</h4>
+              <h4 className="text-label mb-6">Navigation</h4>
               <div className="space-y-3">
                 {footerData.navigation.map((link) => (
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="block text-sm text-text-light/80 hover:text-white transition-colors duration-300"
+                    className="block text-sm text-text-secondary hover:text-white transition-colors duration-300"
                   >
                     {link.label}
                   </Link>
@@ -63,10 +63,10 @@ export default function Footer() {
             </div>
           </ScrollReveal>
 
-          {/* Social Column (replaced Working Hours) */}
+          {/* Social Column */}
           <ScrollReveal delay={0.3}>
             <div>
-              <h4 className="text-label text-text-muted mb-6">Social</h4>
+              <h4 className="text-label mb-6">Social</h4>
               <div className="space-y-3">
                 {footerData.social.map((item) => (
                   <a
@@ -74,7 +74,7 @@ export default function Footer() {
                     href={item.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="block text-sm text-text-light/80 hover:text-white transition-colors duration-300"
+                    className="block text-sm text-text-secondary hover:text-white transition-colors duration-300"
                   >
                     {item.label}
                   </a>
@@ -85,14 +85,14 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="mt-20 pt-8 border-t border-border-dark flex flex-col md:flex-row items-center justify-between gap-4">
+        <div className="mt-20 pt-8 border-t border-border-default flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-xs text-text-muted">
             © {currentYear} Renju Joseph. All rights reserved.
           </p>
           <div className="flex items-center gap-6">
             <a
               href="mailto:renjujoseph6@outlook.com"
-              className="text-xs text-text-muted hover:text-text-light transition-colors duration-300"
+              className="text-xs text-text-muted hover:text-white transition-colors duration-300"
             >
               Let&apos;s Connect
             </a>
